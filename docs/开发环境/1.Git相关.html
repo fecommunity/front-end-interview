@@ -1,0 +1,2243 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.1 Git相关 · 前端工程师面试宝典</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="FE Community">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.Linux相关.html" />
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"fecommunity","repo":"front-end-interview","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+		<span class="title"></span>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			<li>
+				<a href="https://github.com/fecommunity" target="_blank">前端社区</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">文档目录</div>
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    本书介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    一、前端知识体系
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    1.1 HTML相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../前端知识体系/HTML相关/1.HTML基础强化.html">
+            
+                <a href="../前端知识体系/HTML相关/1.HTML基础强化.html">
+            
+                    
+                    1.1.1 HTML基础强化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    1.2 CSS相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../前端知识体系/CSS相关/1.CSS基础.html">
+            
+                <a href="../前端知识体系/CSS相关/1.CSS基础.html">
+            
+                    
+                    1.2.1 CSS基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../前端知识体系/CSS相关/2.CSS布局.html">
+            
+                <a href="../前端知识体系/CSS相关/2.CSS布局.html">
+            
+                    
+                    1.2.2 CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../前端知识体系/CSS相关/3.CSS效果.html">
+            
+                <a href="../前端知识体系/CSS相关/3.CSS效果.html">
+            
+                    
+                    1.2.3 CSS效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../前端知识体系/CSS相关/4.CSS动画.html">
+            
+                <a href="../前端知识体系/CSS相关/4.CSS动画.html">
+            
+                    
+                    1.2.4 CSS动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../前端知识体系/CSS相关/5.预处理器.html">
+            
+                <a href="../前端知识体系/CSS相关/5.预处理器.html">
+            
+                    
+                    1.2.5 预处理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../前端知识体系/CSS相关/6.Bootstrap.html">
+            
+                <a href="../前端知识体系/CSS相关/6.Bootstrap.html">
+            
+                    
+                    1.2.6 Bootstrap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="../前端知识体系/CSS相关/7.CSS工程化方案.html">
+            
+                <a href="../前端知识体系/CSS相关/7.CSS工程化方案.html">
+            
+                    
+                    1.2.6 CSS工程化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    1.3 JavaScript相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../前端知识体系/JS相关/1.JS基础知识.html">
+            
+                <a href="../前端知识体系/JS相关/1.JS基础知识.html">
+            
+                    
+                    1.3.1 JS基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../前端知识体系/JS相关/2.JS-Web-API.html">
+            
+                <a href="../前端知识体系/JS相关/2.JS-Web-API.html">
+            
+                    
+                    1.3.2 JS-Web-API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../前端知识体系/JS相关/3.开发环境.html">
+            
+                <a href="../前端知识体系/JS相关/3.开发环境.html">
+            
+                    
+                    1.3.3 开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../前端知识体系/JS相关/4.运行环境.html">
+            
+                <a href="../前端知识体系/JS相关/4.运行环境.html">
+            
+                    
+                    1.3.4 运行环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../前端知识体系/JS相关/5.ES6专题系列.html">
+            
+                <a href="../前端知识体系/JS相关/5.ES6专题系列.html">
+            
+                    
+                    1.3.5 ES6专题系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../前端知识体系/JS相关/6.虚拟DOM.html">
+            
+                <a href="../前端知识体系/JS相关/6.虚拟DOM.html">
+            
+                    
+                    1.3.6 虚拟DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../前端知识体系/JS相关/7.组件化和React.html">
+            
+                <a href="../前端知识体系/JS相关/7.组件化和React.html">
+            
+                    
+                    1.3.7 组件化和React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.8" data-path="../前端知识体系/JS相关/8.MVVM和Vue.html">
+            
+                <a href="../前端知识体系/JS相关/8.MVVM和Vue.html">
+            
+                    
+                    1.3.8 MVVM和Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.9" data-path="../前端知识体系/JS相关/9.移动端和Hybrid.html">
+            
+                <a href="../前端知识体系/JS相关/9.移动端和Hybrid.html">
+            
+                    
+                    1.3.9 移动端和Hybrid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.10" data-path="../前端知识体系/JS相关/10.原型.html">
+            
+                <a href="../前端知识体系/JS相关/10.原型.html">
+            
+                    
+                    1.3.10 原型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.11" data-path="../前端知识体系/JS相关/11.异步.html">
+            
+                <a href="../前端知识体系/JS相关/11.异步.html">
+            
+                    
+                    1.3.11 异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.12" data-path="../前端知识体系/JS相关/12.正则.html">
+            
+                <a href="../前端知识体系/JS相关/12.正则.html">
+            
+                    
+                    1.3.12 正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.13" data-path="../前端知识体系/JS相关/13.函数.html">
+            
+                <a href="../前端知识体系/JS相关/13.函数.html">
+            
+                    
+                    1.3.13 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    1.4 流行框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../前端知识体系/流行框架/1.React相关.html">
+            
+                <a href="../前端知识体系/流行框架/1.React相关.html">
+            
+                    
+                    1.4.1 React相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../前端知识体系/流行框架/2.Vue相关.html">
+            
+                <a href="../前端知识体系/流行框架/2.Vue相关.html">
+            
+                    
+                    1.4.2 Vue相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../前端知识体系/流行框架/3.Angular相关.html">
+            
+                <a href="../前端知识体系/流行框架/3.Angular相关.html">
+            
+                    
+                    1.4.3 Angular相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    1.5 NodeJS相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../前端知识体系/NodeJS相关/1.基础知识.html">
+            
+                <a href="../前端知识体系/NodeJS相关/1.基础知识.html">
+            
+                    
+                    1.5.1 基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../前端知识体系/NodeJS相关/2.模块机制.html">
+            
+                <a href="../前端知识体系/NodeJS相关/2.模块机制.html">
+            
+                    
+                    1.5.2 模块机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../前端知识体系/NodeJS相关/3.EventLoop.html">
+            
+                <a href="../前端知识体系/NodeJS相关/3.EventLoop.html">
+            
+                    
+                    1.5.3 EventLoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../前端知识体系/NodeJS相关/4.中间件.html">
+            
+                <a href="../前端知识体系/NodeJS相关/4.中间件.html">
+            
+                    
+                    1.5.4 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../前端知识体系/NodeJS相关/5.面试题.html">
+            
+                <a href="../前端知识体系/NodeJS相关/5.面试题.html">
+            
+                    
+                    1.5.5 面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    1.6 性能优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../前端知识体系/性能优化/1.雅虎军规14条.html">
+            
+                <a href="../前端知识体系/性能优化/1.雅虎军规14条.html">
+            
+                    
+                    1.6.1 雅虎军规14条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../前端知识体系/性能优化/2.网络优化.html">
+            
+                <a href="../前端知识体系/性能优化/2.网络优化.html">
+            
+                    
+                    1.6.2 网络优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../前端知识体系/性能优化/3.重绘回流.html">
+            
+                <a href="../前端知识体系/性能优化/3.重绘回流.html">
+            
+                    
+                    1.6.3 重绘回流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../前端知识体系/性能优化/4.浏览器缓存.html">
+            
+                <a href="../前端知识体系/性能优化/4.浏览器缓存.html">
+            
+                    
+                    1.6.4 浏览器缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="../前端知识体系/性能优化/5.CDN加速.html">
+            
+                <a href="../前端知识体系/性能优化/5.CDN加速.html">
+            
+                    
+                    1.6.5 CDN加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.6" data-path="../前端知识体系/性能优化/6.Webpack性能优化.html">
+            
+                <a href="../前端知识体系/性能优化/6.Webpack性能优化.html">
+            
+                    
+                    1.6.6 Webpack性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.7" data-path="../前端知识体系/性能优化/7.其他技术.html">
+            
+                <a href="../前端知识体系/性能优化/7.其他技术.html">
+            
+                    
+                    1.5.7 其他技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.8" data-path="../前端知识体系/性能优化/8.performance性能监控.html">
+            
+                <a href="../前端知识体系/性能优化/8.performance性能监控.html">
+            
+                    
+                    1.5.8 performance性能监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
+            
+                <span>
+            
+                    
+                    1.7 前端工程化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="../前端知识体系/前端工程化/1.Webpack常见面试题.html">
+            
+                <a href="../前端知识体系/前端工程化/1.Webpack常见面试题.html">
+            
+                    
+                    1.7.1 Webpack常见面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" >
+            
+                <span>
+            
+                    
+                    1.8 错误监控
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="../前端知识体系/错误监控/1.错误监控和上报.html">
+            
+                <a href="../前端知识体系/错误监控/1.错误监控和上报.html">
+            
+                    
+                    1.8.1 错误监控和上报
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="../前端知识体系/错误监控/2.异常捕获问题.html">
+            
+                <a href="../前端知识体系/错误监控/2.异常捕获问题.html">
+            
+                    
+                    1.8.2 异常捕获问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" >
+            
+                <span>
+            
+                    
+                    1.9 Web安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="../前端知识体系/Web安全/1.XSS攻击.html">
+            
+                <a href="../前端知识体系/Web安全/1.XSS攻击.html">
+            
+                    
+                    1.9.1 XSS攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.2" data-path="../前端知识体系/Web安全/2.CSRF攻击.html">
+            
+                <a href="../前端知识体系/Web安全/2.CSRF攻击.html">
+            
+                    
+                    1.9.2 CSRF攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    二、计算机网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../计算机网络/1.TCP.html">
+            
+                <a href="../计算机网络/1.TCP.html">
+            
+                    
+                    2.1 TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../计算机网络/2.UDP.html">
+            
+                <a href="../计算机网络/2.UDP.html">
+            
+                    
+                    2.2 UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../计算机网络/3.HTTP.html">
+            
+                <a href="../计算机网络/3.HTTP.html">
+            
+                    
+                    2.3 HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../计算机网络/4.HTTPS.html">
+            
+                <a href="../计算机网络/4.HTTPS.html">
+            
+                    
+                    2.4 HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../计算机网络/5.Ajax.html">
+            
+                <a href="../计算机网络/5.Ajax.html">
+            
+                    
+                    2.5 Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../计算机网络/6.Websocket.html">
+            
+                <a href="../计算机网络/6.Websocket.html">
+            
+                    
+                    2.6 Websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../计算机网络/7.Nginx.html">
+            
+                <a href="../计算机网络/7.Nginx.html">
+            
+                    
+                    2.7 Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../计算机网络/8.CDN.html">
+            
+                <a href="../计算机网络/8.CDN.html">
+            
+                    
+                    2.8 CDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../计算机网络/9.缓存.html">
+            
+                <a href="../计算机网络/9.缓存.html">
+            
+                    
+                    2.9 缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../计算机网络/10.RESTful.html">
+            
+                <a href="../计算机网络/10.RESTful.html">
+            
+                    
+                    2.10 RESTful
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../计算机网络/11.Cookie和Session.html">
+            
+                <a href="../计算机网络/11.Cookie和Session.html">
+            
+                    
+                    2.11 Cookie和Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../计算机网络/12.输入URL请求细节.html">
+            
+                <a href="../计算机网络/12.输入URL请求细节.html">
+            
+                    
+                    2.12 输入URL请求细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../计算机网络/13.跨域.html">
+            
+                <a href="../计算机网络/13.跨域.html">
+            
+                    
+                    2.13 跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    三、操作系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../操作系统/1.基础知识.html">
+            
+                <a href="../操作系统/1.基础知识.html">
+            
+                    
+                    3.1 基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../操作系统/2.面试题.html">
+            
+                <a href="../操作系统/2.面试题.html">
+            
+                    
+                    3.2 面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    四、数据结构与算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../数据结构与算法/1.数据结构.html">
+            
+                <a href="../数据结构与算法/1.数据结构.html">
+            
+                    
+                    4.1 数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../数据结构与算法/2.算法设计.html">
+            
+                <a href="../数据结构与算法/2.算法设计.html">
+            
+                    
+                    4.2 算法相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    五、开发环境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="1.Git相关.html">
+            
+                <a href="1.Git相关.html">
+            
+                    
+                    5.1 Git相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="2.Linux相关.html">
+            
+                <a href="2.Linux相关.html">
+            
+                    
+                    5.2 Linux相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    六、编程题与分析题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../编程题与分析题/1.继承的多种实现方式.html">
+            
+                <a href="../编程题与分析题/1.继承的多种实现方式.html">
+            
+                    
+                    6.1 继承的多种实现方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../编程题与分析题/2.call、bind、apply的实现.html">
+            
+                <a href="../编程题与分析题/2.call、bind、apply的实现.html">
+            
+                    
+                    6.2 call、bind、apply的实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../编程题与分析题/3.new的实现原理.html">
+            
+                <a href="../编程题与分析题/3.new的实现原理.html">
+            
+                    
+                    6.3 new的实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../编程题与分析题/4.防抖节流实现.html">
+            
+                <a href="../编程题与分析题/4.防抖节流实现.html">
+            
+                    
+                    6.4 防抖节流实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../编程题与分析题/5.观察者设计模式.html">
+            
+                <a href="../编程题与分析题/5.观察者设计模式.html">
+            
+                    
+                    6.5 观察者设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../编程题与分析题/6.深浅拷贝.html">
+            
+                <a href="../编程题与分析题/6.深浅拷贝.html">
+            
+                    
+                    6.6 深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../编程题与分析题/7.DOM树遍历.html">
+            
+                <a href="../编程题与分析题/7.DOM树遍历.html">
+            
+                    
+                    6.7 DOM树遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../编程题与分析题/8.类型检测.html">
+            
+                <a href="../编程题与分析题/8.类型检测.html">
+            
+                    
+                    6.8 类型检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../编程题与分析题/9.闭包问题.html">
+            
+                <a href="../编程题与分析题/9.闭包问题.html">
+            
+                    
+                    6.9 闭包问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../编程题与分析题/10.异步问题.html">
+            
+                <a href="../编程题与分析题/10.异步问题.html">
+            
+                    
+                    6.10 异步问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../编程题与分析题/11.排序算法.html">
+            
+                <a href="../编程题与分析题/11.排序算法.html">
+            
+                    
+                    6.11 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../编程题与分析题/12.搜索算法.html">
+            
+                <a href="../编程题与分析题/12.搜索算法.html">
+            
+                    
+                    6.12 搜索算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../编程题与分析题/13.常见算法.html">
+            
+                <a href="../编程题与分析题/13.常见算法.html">
+            
+                    
+                    6.13 常见算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../编程题与分析题/14.this指向.html">
+            
+                <a href="../编程题与分析题/14.this指向.html">
+            
+                    
+                    6.14 this指向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../编程题与分析题/15.arguments参数.html">
+            
+                <a href="../编程题与分析题/15.arguments参数.html">
+            
+                    
+                    6.15 arguments参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="../编程题与分析题/16.Promise实现原理.html">
+            
+                <a href="../编程题与分析题/16.Promise实现原理.html">
+            
+                    
+                    6.16 Promise实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.17" data-path="../编程题与分析题/17.函数curry化.html">
+            
+                <a href="../编程题与分析题/17.函数curry化.html">
+            
+                    
+                    6.17 函数Curry化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.18" data-path="../编程题与分析题/18.数组去重.html">
+            
+                <a href="../编程题与分析题/18.数组去重.html">
+            
+                    
+                    6.18 数组去重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.19" data-path="../编程题与分析题/19.数组扁平化.html">
+            
+                <a href="../编程题与分析题/19.数组扁平化.html">
+            
+                    
+                    6.19 数组扁平化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.20" data-path="../编程题与分析题/20.求数组最大值和最小值.html">
+            
+                <a href="../编程题与分析题/20.求数组最大值和最小值.html">
+            
+                    
+                    6.20 求数组最大最小值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.21" data-path="../编程题与分析题/21.模拟实现私有变量.html">
+            
+                <a href="../编程题与分析题/21.模拟实现私有变量.html">
+            
+                    
+                    6.21 模拟实现私有变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.22" data-path="../编程题与分析题/22.for of与迭代器.html">
+            
+                <a href="../编程题与分析题/22.for of与迭代器.html">
+            
+                    
+                    6.22 for of与迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.23" data-path="../编程题与分析题/23.Generator的执行细节分析.html">
+            
+                <a href="../编程题与分析题/23.Generator的执行细节分析.html">
+            
+                    
+                    6.23 Generator的执行细节分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.24" data-path="../编程题与分析题/24.模板字符串的高级用法.html">
+            
+                <a href="../编程题与分析题/24.模板字符串的高级用法.html">
+            
+                    
+                    6.24 模板字符串的高级用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.25" data-path="../编程题与分析题/25.通用的forEach函数.html">
+            
+                <a href="../编程题与分析题/25.通用的forEach函数.html">
+            
+                    
+                    6.25 通用的forEach函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.26" data-path="../编程题与分析题/26.判断两个对象相等.html">
+            
+                <a href="../编程题与分析题/26.判断两个对象相等.html">
+            
+                    
+                    6.26 判断两个对象相等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.27" data-path="../编程题与分析题/27.实现乱序函数.html">
+            
+                <a href="../编程题与分析题/27.实现乱序函数.html">
+            
+                    
+                    6.27 实现乱序函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    七、面经系列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../面经系列/0.面试技巧.html">
+            
+                <a href="../面经系列/0.面试技巧.html">
+            
+                    
+                    7.0 面试技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../面经系列/1.阿里面经.html">
+            
+                <a href="../面经系列/1.阿里面经.html">
+            
+                    
+                    7.1 阿里面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../面经系列/2.腾讯面经.html">
+            
+                <a href="../面经系列/2.腾讯面经.html">
+            
+                    
+                    7.2 腾讯面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../面经系列/3.百度面经.html">
+            
+                <a href="../面经系列/3.百度面经.html">
+            
+                    
+                    7.3 百度面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../面经系列/4.头条面经.html">
+            
+                <a href="../面经系列/4.头条面经.html">
+            
+                    
+                    7.4 头条面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../面经系列/5.美团面经.html">
+            
+                <a href="../面经系列/5.美团面经.html">
+            
+                    
+                    7.5 美团面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    八、结束
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../总结/1.前端总结.html">
+            
+                <a href="../总结/1.前端总结.html">
+            
+                    
+                    8.1 前端总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../总结/2.参考资料.html">
+            
+                <a href="../总结/2.参考资料.html">
+            
+                    
+                    8.2 参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<!-- Content nav -->
+	<div class="book-anchor">
+		<div class="book-anchor-title">在这篇文章中:</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5.1 Git相关</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<html><head></head><body><h1 id="git">Git</h1>
+<h2 id="1-git&#x7684;&#x4E09;&#x79CD;&#x72B6;&#x6001;">1. Git&#x7684;&#x4E09;&#x79CD;&#x72B6;&#x6001;</h2>
+<ul>
+<li>&#x5DF2;&#x63D0;&#x4EA4; committed</li>
+<li>&#x5DF2;&#x6682;&#x5B58; staged</li>
+<li>&#x5DF2;&#x4FEE;&#x6539; modified</li>
+</ul>
+<h2 id="2-git&#x7684;&#x4E09;&#x4E2A;&#x533A;&#x57DF;">2. Git&#x7684;&#x4E09;&#x4E2A;&#x533A;&#x57DF;</h2>
+<ol>
+<li>Git&#x4ED3;&#x5E93;<ul>
+<li>&#x662F; Git &#x7528;&#x6765;&#x4FDD;&#x5B58;&#x9879;&#x76EE;&#x7684;&#x5143;&#x6570;&#x636E;&#x548C;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5730;&#x65B9;&#x3002; &#x8FD9;&#x662F; Git &#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x4ECE;&#x5176;&#x5B83;&#x8BA1;&#x7B97;&#x673A;&#x514B;&#x9686;&#x4ED3;&#x5E93;&#x65F6;&#xFF0C;&#x62F7;&#x8D1D;&#x7684;&#x5C31;&#x662F;&#x8FD9;&#x91CC;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+</li>
+<li>&#x6682;&#x5B58;&#x533A;&#x57DF;<ul>
+<li>&#x6682;&#x5B58;&#x533A;&#x57DF;&#x662F;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x4FDD;&#x5B58;&#x4E86;&#x4E0B;&#x6B21;&#x5C06;&#x63D0;&#x4EA4;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;&#x4FE1;&#x606F;&#xFF0C;&#x4E00;&#x822C;&#x5728; Git &#x4ED3;&#x5E93;&#x76EE;&#x5F55;&#x4E2D;&#x3002; &#x6709;&#x65F6;&#x5019;&#x4E5F;&#x88AB;&#x79F0;&#x4F5C;`&#x2018;&#x7D22;&#x5F15;&#x2019;&apos;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E00;&#x822C;&#x8BF4;&#x6CD5;&#x8FD8;&#x662F;&#x53EB;&#x6682;&#x5B58;&#x533A;&#x57DF;&#x3002;</li>
+</ul>
+</li>
+<li>&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;<ul>
+<li>&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x662F;&#x5BF9;&#x9879;&#x76EE;&#x7684;&#x67D0;&#x4E2A;&#x7248;&#x672C;&#x72EC;&#x7ACB;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x7684;&#x5185;&#x5BB9;&#x3002; &#x8FD9;&#x4E9B;&#x4ECE; Git &#x4ED3;&#x5E93;&#x7684;&#x538B;&#x7F29;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x653E;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#x4F9B;&#x4F60;&#x4F7F;&#x7528;&#x6216;&#x4FEE;&#x6539;&#x3002;</li>
+</ul>
+</li>
+</ol>
+<h2 id="3-&#x57FA;&#x672C;&#x7684;-git-&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;">3. &#x57FA;&#x672C;&#x7684; Git &#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;</h2>
+<ol>
+<li>&#x5728;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x4FEE;&#x6539;&#x6587;&#x4EF6;</li>
+<li>&#x6682;&#x5B58;&#x6587;&#x4EF6;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x7684;&#x5FEB;&#x7167;&#x653E;&#x5165;&#x6682;&#x5B58;&#x533A;</li>
+<li>&#x63D0;&#x4EA4;&#x66F4;&#x65B0;&#xFF0C;&#x627E;&#x5230;&#x6682;&#x5B58;&#x53BB;&#x6587;&#x4EF6;&#xFF0C;&#x5C06;&#x5FEB;&#x7167;&#x6C38;&#x4E45;&#x6027;&#x5B58;&#x50A8;&#x5230; Git &#x4ED3;&#x5E93;&#x76EE;&#x5F55;&#x3002;</li>
+</ol>
+<h3 id="31-&#x7528;&#x6237;&#x4FE1;&#x606F;">3.1 &#x7528;&#x6237;&#x4FE1;&#x606F;</h3>
+<blockquote>
+<p>[!NOTE]
+&#x5F53;&#x5B89;&#x88C5;&#x5B8C; Git &#x5E94;&#x8BE5;&#x505A;&#x7684;&#x7B2C;&#x4E00;&#x4EF6;&#x4E8B;&#x5C31;&#x662F;&#x8BBE;&#x7F6E;&#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;&#x79F0;&#x4E0E;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#x3002; &#x8FD9;&#x6837;&#x505A;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A; Git &#x7684;&#x63D0;&#x4EA4;&#x90FD;&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x4F1A;&#x5199;&#x5165;&#x5230;&#x4F60;&#x7684;&#x6BCF;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x4E2D;&#xFF0C;&#x4E0D;&#x53EF;&#x66F4;&#x6539;&#x3002;</p>
+</blockquote>
+<pre><code>git config --global user.name &quot;huyaocode&quot;
+git config --global user.email johndoe@example.com
+</code></pre><h3 id="32-&#x52A0;&#x5165;&#x6682;&#x5B58;&#x533A;">3.2 &#x52A0;&#x5165;&#x6682;&#x5B58;&#x533A;</h3>
+<pre><code>git add &#x6587;&#x4EF6;&#x540D;&#x6216;&#x8DEF;&#x5F84;
+</code></pre><h3 id="33-&#x5FFD;&#x7565;&#x6587;&#x4EF6;">3.3 &#x5FFD;&#x7565;&#x6587;&#x4EF6;</h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>.gitignore</code>&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x63CF;&#x8FF0;&#x9700;&#x8981;&#x5FFD;&#x7565;&#x7684;&#x6587;&#x4EF6;&#x3002; &#x53C2;&#x8003;</p>
+<pre><code class="lang-py"><span class="hljs-comment"># no .a files</span>
+*.a
+<span class="hljs-comment"># but do track lib.a, even though you&apos;re ignoring .a files above</span>
+!lib.a
+<span class="hljs-comment"># &#x53EA;&#x5FFD;&#x7565;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x5DF2; TODO &#x4E3A;&#x540D;&#x7684;&#x6587;&#x4EF6;</span>
+/TODO
+<span class="hljs-comment"># &#x5FFD;&#x7565;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B; build &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;</span>
+build/
+<span class="hljs-comment"># ignore doc/notes.txt, but not doc/server/arch.txt</span>
+doc/*.txt
+<span class="hljs-comment"># ignore all .pdf files in the doc/ directory</span>
+doc/**/*.pdf
+</code></pre>
+<h3 id="34-&#x72B6;&#x6001;&#x4FEE;&#x6539;">3.4 &#x72B6;&#x6001;&#x4FEE;&#x6539;</h3>
+<p><code>git status -s</code>&#x5C06;&#x6BCF;&#x4E2A;&#x4FEE;&#x6539;&#x72B6;&#x6001;&#x4EE5;&#x4E00;&#x884C;&#x5C55;&#x793A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;<code>git status</code>&#x591A;&#x884C;&#x5C55;&#x793A;&#x3002;</p>
+<ul>
+<li><code>A</code> &#x65B0;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;&#x4E2D;&#x7684;&#x6587;&#x4EF6;</li>
+<li><code>M</code> &#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;</li>
+<li><code>D</code> &#x88AB;&#x5220;&#x9664;&#x7684;&#x6587;&#x4EF6;</li>
+<li><code>MM</code> &#x51FA;&#x73B0;&#x5728;&#x53F3;&#x8FB9;&#x7684; M &#x8868;&#x793A;&#x8BE5;&#x6587;&#x4EF6;&#x88AB;&#x4FEE;&#x6539;&#x4E86;&#x4F46;&#x662F;&#x8FD8;&#x6CA1;&#x653E;&#x5165;&#x6682;&#x5B58;&#x533A;&#xFF0C;&#x51FA;&#x73B0;&#x5728;&#x9760;&#x5DE6;&#x8FB9;&#x7684; M &#x8868;&#x793A;&#x8BE5;&#x6587;&#x4EF6;&#x88AB;&#x4FEE;&#x6539;&#x4E86;&#x5E76;&#x653E;&#x5165;&#x4E86;&#x6682;&#x5B58;&#x533A;&#x3002;</li>
+<li><code>??</code> &#x672A;&#x8DDF;&#x8E2A;</li>
+</ul>
+<h3 id="35-&#x67E5;&#x770B;&#x4FEE;&#x6539;">3.5 &#x67E5;&#x770B;&#x4FEE;&#x6539;</h3>
+<ul>
+<li>&#x8981;&#x67E5;&#x770B;&#x5C1A;&#x672A;&#x6682;&#x5B58;&#x7684;&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#x4E86;&#x54EA;&#x4E9B;&#x90E8;&#x5206;&#xFF0C;&#x4E0D;&#x52A0;&#x53C2;&#x6570;&#x76F4;&#x63A5;&#x8F93;&#x5165; <code>git diff</code></li>
+<li>&#x8981;&#x67E5;&#x770B;&#x5DF2;&#x6682;&#x5B58;&#x7684;&#x5C06;&#x8981;&#x6DFB;&#x52A0;&#x5230;&#x4E0B;&#x6B21;&#x63D0;&#x4EA4;&#x91CC;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; <code>git diff --cached</code> &#x6216; <code>git diff --staged</code></li>
+</ul>
+<h3 id="36-&#x63D0;&#x4EA4;&#x4FEE;&#x6539;">3.6 &#x63D0;&#x4EA4;&#x4FEE;&#x6539;</h3>
+<p>&#x8FD0;&#x884C;<code>git commit</code>&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x60C5;&#x51B5;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4F1A;&#x542F;&#x52A8;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x5F00;&#x5934;&#x8FD8;&#x6709;&#x4E00;&#x7A7A;&#x884C;&#xFF0C;&#x4F9B;&#x4F60;&#x8F93;&#x5165;&#x63D0;&#x4EA4;&#x8BF4;&#x660E;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x884C;&#x662F;&#x88AB;&#x6CE8;&#x91CA;&#x4E86;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53D6;&#x6D88;&#x8FD9;&#x4E9B;&#x6CE8;&#x91CA;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x662F;vim &#x6216; emacs&#x3002;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x6309;&#x7167; &#x8D77;&#x6B65; &#x4ECB;&#x7ECD;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528; <code>git config --global core.editor</code> &#x547D;&#x4EE4;&#x8BBE;&#x5B9A;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x7F16;&#x8F91;&#x8F6F;&#x4EF6;&#x3002;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>git commit -m &quot;&#x4FEE;&#x6539;&#x63CF;&#x8FF0;&quot;</code> &#x8FD9;&#x79CD;&#x76F4;&#x63A5;&#x8F93;&#x5165;&#x63CF;&#x8FF0;&#x7684;&#x65B9;&#x5F0F;&#x63D0;&#x4EA4;&#x4FEE;&#x6539;&#x3002;</p>
+<p> <code>git commit</code> &#x52A0;&#x4E0A; <code>-a</code> &#x9009;&#x9879;&#xFF0C;Git &#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x628A;&#x6240;&#x6709;&#x5DF2;&#x7ECF;&#x8DDF;&#x8E2A;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#x6682;&#x5B58;&#x8D77;&#x6765;&#x4E00;&#x5E76;&#x63D0;&#x4EA4;&#xFF0C;&#x4ECE;&#x800C;&#x8DF3;&#x8FC7; git add &#x6B65;&#x9AA4;</p>
+<h3 id="37-&#x79FB;&#x9664;&#x6587;&#x4EF6;">3.7 &#x79FB;&#x9664;&#x6587;&#x4EF6;</h3>
+<p>&#x8981;&#x4ECE; Git &#x4E2D;&#x79FB;&#x9664;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x8981;&#x4ECE;&#x5DF2;&#x8DDF;&#x8E2A;&#x6587;&#x4EF6;&#x6E05;&#x5355;&#x4E2D;&#x79FB;&#x9664;&#xFF08;&#x786E;&#x5207;&#x5730;&#x8BF4;&#xFF0C;&#x662F;&#x4ECE;&#x6682;&#x5B58;&#x533A;&#x57DF;&#x79FB;&#x9664;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x63D0;&#x4EA4;&#x3002;
+&#x53EF;&#x4EE5;&#x7528; git rm &#x547D;&#x4EE4;&#x5B8C;&#x6210;&#x6B64;&#x9879;&#x5DE5;&#x4F5C;&#xFF0C;&#x5E76;&#x8FDE;&#x5E26;&#x4ECE;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x4E2D;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x6837;&#x4EE5;&#x540E;&#x5C31;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x672A;&#x8DDF;&#x8E2A;&#x6587;&#x4EF6;&#x6E05;&#x5355;&#x4E2D;&#x4E86;&#x3002;</p>
+<p>&#x8FD0;&#x884C; <code>git rm</code>&#x8BB0;&#x5F55;&#x6B64;&#x6B21;&#x79FB;&#x9664;&#x6587;&#x4EF6;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x4E0B;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x65F6;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x5C31;&#x4E0D;&#x518D;&#x7EB3;&#x5165;&#x7248;&#x672C;&#x7BA1;&#x7406;&#x4E86;&#x3002; &#x5982;&#x679C;&#x5220;&#x9664;&#x4E4B;&#x524D;&#x4FEE;&#x6539;&#x8FC7;&#x5E76;&#x4E14;&#x5DF2;&#x7ECF;&#x653E;&#x5230;&#x6682;&#x5B58;&#x533A;&#x57DF;&#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x8981;&#x7528;&#x5F3A;&#x5236;&#x5220;&#x9664;&#x9009;&#x9879; <code>-f</code>&#xFF08;&#x8BD1;&#x6CE8;&#xFF1A;&#x5373; force &#x7684;&#x9996;&#x5B57;&#x6BCD;&#xFF09;&#x3002; &#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x5B89;&#x5168;&#x7279;&#x6027;&#xFF0C;&#x7528;&#x4E8E;&#x9632;&#x6B62;&#x8BEF;&#x5220;&#x8FD8;&#x6CA1;&#x6709;&#x6DFB;&#x52A0;&#x5230;&#x5FEB;&#x7167;&#x7684;&#x6570;&#x636E;&#xFF0C;
+&#x8FD9;&#x6837;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x80FD;&#x88AB; Git &#x6062;&#x590D;&#x3002;</p>
+<p>&#x60F3;&#x628A;&#x6587;&#x4EF6;&#x4ECE; Git &#x4ED3;&#x5E93;&#x4E2D;&#x5220;&#x9664;&#xFF08;&#x4EA6;&#x5373;&#x4ECE;&#x6682;&#x5B58;&#x533A;&#x57DF;&#x79FB;&#x9664;&#xFF09;&#xFF0C;&#x4F46;&#x4ECD;&#x7136;&#x5E0C;&#x671B;&#x4FDD;&#x7559;&#x5728;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x4E2D;&#x3002;(&#x4E0D;&#x60F3;&#x8BA9;Git&#x8DDF;&#x8E2A;)</p>
+<pre><code>git rm --cached &#x67D0;&#x6587;&#x4EF6;
+</code></pre><h3 id="38-&#x6587;&#x4EF6;&#x66F4;&#x540D;">3.8 &#x6587;&#x4EF6;&#x66F4;&#x540D;</h3>
+<pre><code>git mv file_from file_to
+</code></pre><p>&#x5176;&#x5B9E;&#xFF0C;&#x8FD0;&#x884C; git mv &#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x8FD0;&#x884C;&#x4E86;&#x4E0B;&#x9762;&#x4E09;&#x6761;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>mv README.md README
+git rm README.md
+git add README
+</code></pre><h3 id="39-&#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;">3.9 &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;</h3>
+<blockquote>
+<p>[!NOTE]
+<code>git log</code>git log &#x4F1A;&#x6309;&#x63D0;&#x4EA4;&#x65F6;&#x95F4;&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x66F4;&#x65B0;&#xFF0C;&#x6700;&#x8FD1;&#x7684;&#x66F4;&#x65B0;&#x6392;&#x5728;&#x6700;&#x4E0A;&#x9762;&#x3002; &#x6B63;&#x5982;&#x4F60;&#x6240;&#x770B;&#x5230;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4F1A;&#x5217;&#x51FA;&#x6BCF;&#x4E2A;&#x63D0;&#x4EA4;&#x7684; SHA-1 &#x6821;&#x9A8C;&#x548C;&#x3001;&#x4F5C;&#x8005;&#x7684;&#x540D;&#x5B57;&#x548C;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#x3001;&#x63D0;&#x4EA4;&#x65F6;&#x95F4;&#x4EE5;&#x53CA;&#x63D0;&#x4EA4;&#x8BF4;&#x660E;&#x3002;</p>
+</blockquote>
+<p>&#x4F7F;&#x7528; <code>-p</code> &#x7528;&#x6765;&#x9650;&#x5236;&#x5C55;&#x793A;&#x6761;&#x6570;&#x3002;<code>git log -p -2</code></p>
+<p>&#x4F7F;&#x7528; <code>--stat</code> &#x9009;&#x9879;&#x770B;&#x5230;&#x6BCF;&#x6B21;&#x63D0;</p>
+<p>&#x4F7F;&#x7528;<code>format</code>&#xFF0C;&#x5B9A;&#x5236;&#x8981;&#x663E;&#x793A;&#x7684;&#x8BB0;&#x5F55;&#x683C;&#x5F0F;&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>--graph</code>&#x53EF;&#x5F62;&#x8C61;&#x5730;&#x5C55;&#x793A;&#x4F60;&#x7684;&#x5206;&#x652F;&#x3001;&#x5408;&#x5E76;&#x5386;&#x53F2;&#x3002;</p>
+<pre><code>$ git log --pretty=format:&quot;%h %s&quot; --graph
+* 2d3acf9 ignore errors from SIGCHLD on trap
+* 5e3ee11 Merge branch &apos;master&apos; of git://github.com/dustin/grit
+|\
+| * 420eac9 Added a method for getting the current branch.
+* | 30e367c timeout code and tests
+* | 5a09431 add timeout protection to grit
+* | e1193f8 support for heads with slashes in them
+|/
+* d6016bc require time for xmlschema
+* 11d191e Merge branch &apos;defunkt&apos; into local
+</code></pre><h3 id="310-&#x91CD;&#x65B0;&#x63D0;&#x4EA4;">3.10 &#x91CD;&#x65B0;&#x63D0;&#x4EA4;</h3>
+<blockquote>
+<p>[!NOTE]
+&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x63D0;&#x4EA4;&#x5B8C;&#x4E86;&#x624D;&#x53D1;&#x73B0;&#x6F0F;&#x6389;&#x4E86;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;&#x6CA1;&#x6709;&#x6DFB;&#x52A0;&#xFF0C;&#x6216;&#x8005;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x5199;&#x9519;&#x4E86;&#x3002; &#x6B64;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x5E26;&#x6709; <code>--amend</code> &#x9009;&#x9879;&#x7684;&#x63D0;&#x4EA4;&#x547D;&#x4EE4;&#x5C1D;&#x8BD5;&#x91CD;&#x65B0;&#x63D0;&#x4EA4;&#x3002;</p>
+</blockquote>
+<pre><code>git commit --amend
+</code></pre><p>&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4F1A;&#x5C06;&#x6682;&#x5B58;&#x533A;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x63D0;&#x4EA4;&#x3002; &#x5982;&#x679C;&#x81EA;&#x4E0A;&#x6B21;&#x63D0;&#x4EA4;&#x4EE5;&#x6765;&#x4F60;&#x8FD8;&#x672A;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x4E0A;&#x6B21;&#x63D0;&#x4EA4;&#x540E;&#x9A6C;&#x4E0A;&#x6267;&#x884C;&#x4E86;&#x6B64;&#x547D;&#x4EE4;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5FEB;&#x7167;&#x4F1A;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#xFF0C;&#x800C;&#x4F60;&#x6240;&#x4FEE;&#x6539;&#x7684;&#x53EA;&#x662F;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E4B;&#x524D;&#x7684;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x3002; &#x7F16;&#x8F91;&#x540E;&#x4FDD;&#x5B58;&#x4F1A;&#x8986;&#x76D6;&#x539F;&#x6765;&#x7684;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x63D0;&#x4EA4;&#x540E;&#x53D1;&#x73B0;&#x5FD8;&#x8BB0;&#x4E86;&#x6682;&#x5B58;&#x67D0;&#x4E9B;&#x9700;&#x8981;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x53EF;&#x4EE5;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code>git commit -m &apos;initial commit&apos;
+git add forgotten_file
+git commit --amend
+</code></pre><p>&#x6700;&#x7EC8;&#x4F60;&#x53EA;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x63D0;&#x4EA4; - &#x7B2C;&#x4E8C;&#x6B21;&#x63D0;&#x4EA4;&#x5C06;&#x4EE3;&#x66FF;&#x7B2C;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<h3 id="311-&#x53D6;&#x6D88;&#x6682;&#x5B58;&#x7684;&#x6587;&#x4EF6;">3.11 &#x53D6;&#x6D88;&#x6682;&#x5B58;&#x7684;&#x6587;&#x4EF6;</h3>
+<p>&#x4F7F;&#x7528; <code>git reset HEAD &lt;file&gt;</code> &#x6765;&#x53D6;&#x6D88;&#x6682;&#x5B58;&#x3002;&#x5728;&#x8C03;&#x7528;&#x65F6;&#x52A0;&#x4E0A; --hard &#x9009;&#x9879;&#x53EF;&#x4EE5;&#x4EE4; git reset &#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x5371;&#x9669;&#x7684;&#x547D;&#x4EE4;&#xFF08;&#x8BD1;&#x6CE8;&#xFF1A;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x4E2D;&#x6240;&#x6709;&#x5F53;&#x524D;&#x8FDB;&#x5EA6;&#x4E22;&#x5931;&#xFF01;&#xFF09;</p>
+<h3 id="312-&#x64A4;&#x6D88;&#x5BF9;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;">3.12 &#x64A4;&#x6D88;&#x5BF9;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;</h3>
+<p>&#x4F7F;&#x7528;<code>git checkout -- &lt;file&gt;</code> &#x53EF;&#x4EE5;&#x64A4;&#x9500;&#x4FEE;&#x6539;&#xFF08;&#x672A;&#x4FDD;&#x5B58;&#x5230;&#x6682;&#x5B58;&#x533A;&#xFF09;</p>
+<h2 id="4--&#x4EC0;&#x4E48;&#x662F;-git-&#x590D;&#x523B;&#xFF08;fork&#xFF09;&#xFF1F;&#x590D;&#x523B;&#xFF08;fork&#xFF09;&#x3001;&#x5206;&#x652F;&#xFF08;branch&#xFF09;&#x548C;&#x514B;&#x9686;&#xFF08;clone&#xFF09;&#x4E4B;&#x95F4;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;">4.  &#x4EC0;&#x4E48;&#x662F; Git &#x590D;&#x523B;&#xFF08;fork&#xFF09;&#xFF1F;&#x590D;&#x523B;&#xFF08;fork&#xFF09;&#x3001;&#x5206;&#x652F;&#xFF08;branch&#xFF09;&#x548C;&#x514B;&#x9686;&#xFF08;clone&#xFF09;&#x4E4B;&#x95F4;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;</h2>
+<ol>
+<li><strong>&#x590D;&#x523B;&#xFF08;fork&#xFF09;</strong> &#x662F;&#x5BF9;&#x5B58;&#x50A8;&#x4ED3;&#x5E93;&#xFF08;repository&#xFF09;&#x8FDB;&#x884C;&#x7684;&#x8FDC;&#x7A0B;&#x7684;&#x3001;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7684;&#x62F7;&#x8D1D;&#xFF0C;&#x4ECE;&#x6E90;&#x5934;&#x4E0A;&#x5C31;&#x6709;&#x6240;&#x533A;&#x522B;&#x3002;&#x590D;&#x523B;&#x5B9E;&#x9645;&#x4E0A;&#x4E0D;&#x662F; Git &#x7684;&#x8303;&#x7574;&#x3002;&#x5B83;&#x66F4;&#x50CF;&#x662F;&#x4E2A;&#x653F;&#x6CBB;/&#x793E;&#x4F1A;&#x6982;&#x5FF5;&#x3002;</li>
+<li><strong>&#x514B;&#x9686;&#xFF08;clone&#xFF09;</strong>&#x4E0D;&#x662F;&#x590D;&#x523B;&#xFF0C;&#x514B;&#x9686;&#x662F;&#x4E2A;&#x5BF9;&#x67D0;&#x4E2A;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;&#x672C;&#x5730;&#x62F7;&#x8D1D;&#x3002;&#x514B;&#x9686;&#x65F6;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x62F7;&#x8D1D;&#x6574;&#x4E2A;&#x6E90;&#x5B58;&#x50A8;&#x4ED3;&#x5E93;&#xFF0C;&#x5305;&#x62EC;&#x6240;&#x6709;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x548C;&#x5206;&#x652F;&#x3002;</li>
+<li><strong>&#x5206;&#x652F;&#xFF08;branch&#xFF09;</strong> &#x662F;&#x4E00;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x5355;&#x4E00;&#x5B58;&#x50A8;&#x4ED3;&#x5E93;&#x4E2D;&#x7684;&#x53D8;&#x66F4;&#xFF0C;&#x5E76;&#x6700;&#x7EC8;&#x76EE;&#x7684;&#x662F;&#x7528;&#x4E8E;&#x4E0E;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x5408;&#x5E76;&#x3002;</li>
+</ol>
+<h2 id="5-&#x62C9;&#x53D6;&#x8BF7;&#x6C42;&#xFF08;pull-request&#xFF09;&#x548C;&#x5206;&#x652F;&#xFF08;branch&#xFF09;&#x4E4B;&#x95F4;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;">5. &#x201C;&#x62C9;&#x53D6;&#x8BF7;&#x6C42;&#xFF08;pull request&#xFF09;&#x201D;&#x548C;&#x201C;&#x5206;&#x652F;&#xFF08;branch&#xFF09;&#x201D;&#x4E4B;&#x95F4;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;</h2>
+<ol>
+<li><strong>&#x5206;&#x652F;&#xFF08;branch&#xFF09;</strong> &#x662F;&#x4EE3;&#x7801;&#x7684;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7248;&#x672C;&#x3002;</li>
+<li><strong>&#x62C9;&#x53D6;&#x8BF7;&#x6C42;&#xFF08;pull request&#xFF09;</strong> &#x662F;&#x5F53;&#x6709;&#x4EBA;&#x7528;&#x4ED3;&#x5E93;&#xFF0C;&#x5EFA;&#x7ACB;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x505A;&#x4E86;&#x4E9B;&#x4FEE;&#x6539;&#x5E76;&#x5408;&#x5E76;&#x5230;&#x8BE5;&#x5206;&#x652F;&#xFF08;&#x628A;&#x81EA;&#x5DF1;&#x4FEE;&#x6539;&#x5E94;&#x7528;&#x5230;&#x522B;&#x4EBA;&#x7684;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;&#xFF09;&#x3002;</li>
+</ol>
+<h2 id="6-git-pull&#x548C;git-fetch&#x4E4B;&#x95F4;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;">6. &#x201C;git pull&#x201D;&#x548C;&#x201C;git fetch&#x201D;&#x4E4B;&#x95F4;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;</h2>
+<ol>
+<li><p>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;git pull &#x662F; git fetch + git merge&#x3002;</p>
+</li>
+<li><p>&#x5F53;&#x4F60;&#x4F7F;&#x7528; pull&#xFF0C;Git &#x4F1A;&#x8BD5;&#x7740;&#x81EA;&#x52A8;&#x4E3A;&#x4F60;&#x5B8C;&#x6210;&#x5DE5;&#x4F5C;&#x3002;&#x5B83;&#x662F;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;&#x5DE5;&#x4F5C;&#x73AF;&#x5883;&#xFF09;&#x654F;&#x611F;&#x7684;&#xFF0C;&#x6240;&#x4EE5; Git &#x4F1A;&#x628A;&#x6240;&#x6709;&#x62C9;&#x53D6;&#x7684;&#x63D0;&#x4EA4;&#x5408;&#x5E76;&#x5230;&#x4F60;&#x5F53;&#x524D;&#x5904;&#x7406;&#x7684;&#x5206;&#x652F;&#x4E2D;&#x3002;pull &#x5219;&#x662F; &#x81EA;&#x52A8;&#x5408;&#x5E76;&#x63D0;&#x4EA4;&#x800C;&#x6CA1;&#x6709;&#x8BA9;&#x4F60;&#x590D;&#x67E5;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x7EC6;&#x5FC3;&#x7BA1;&#x7406;&#x4F60;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x9891;&#x7E41;&#x9047;&#x5230;&#x51B2;&#x7A81;&#x3002;</p>
+</li>
+<li><p>&#x5F53;&#x4F60; fetch&#xFF0C;Git &#x4F1A;&#x6536;&#x96C6;&#x76EE;&#x6807;&#x5206;&#x652F;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x63D0;&#x4EA4;&#xFF0C;&#x5E76;&#x5C06;&#x8FD9;&#x4E9B;&#x63D0;&#x4EA4;&#x5B58;&#x50A8;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x4E2D;&#x3002;&#x4F46;Git &#x4E0D;&#x4F1A;&#x628A;&#x8FD9;&#x4E9B;&#x63D0;&#x4EA4;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;&#x4E2D;&#x3002;&#x8FD9;&#x79CD;&#x5904;&#x7406;&#x903B;&#x8F91;&#x5728;&#x5F53;&#x4F60;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x4ED3;&#x5E93;&#x66F4;&#x65B0;&#xFF0C;&#x5728;&#x66F4;&#x65B0;&#x6587;&#x4EF6;&#x65F6;&#x53C8;&#x5E0C;&#x671B;&#x5904;&#x7406;&#x53EF;&#x80FD;&#x4E2D;&#x65AD;&#x7684;&#x4E8B;&#x60C5;&#x65F6;&#xFF0C;&#x8FD9;&#x5C06;&#x975E;&#x5E38;&#x5B9E;&#x7528;&#x3002;&#x800C;&#x5C06;&#x63D0;&#x4EA4;&#x5408;&#x5E76;&#x5230;&#x4E3B;&#x5206;&#x652F;&#x4E2D;&#xFF0C;&#x5219;&#x8BE5;&#x4F7F;&#x7528; merge&#x3002;</p>
+</li>
+</ol>
+<h2 id="7-&#x5982;&#x5728;-git-&#x6062;&#x590D;&#x5148;&#x524D;&#x7684;&#x63D0;&#x4EA4;&#xFF1F;">7. &#x5982;&#x5728; Git &#x6062;&#x590D;&#x5148;&#x524D;&#x7684;&#x63D0;&#x4EA4;&#xFF1F;</h2>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x7684;&#x60C5;&#x5F62;&#x662F;&#x8FD9;&#x6837;&#xFF0C;&#x5176;&#x4E2D; C &#x662F;&#x4F60;&#x7684; HEAD&#xFF0C;(F) &#x662F;&#x4F60;&#x6587;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<pre><code>   (F)
+A-B-C
+    &#x2191;
+  master
+
+   (F)
+A-B-C
+    &#x2191;
+  master
+&#x8981;&#x4FEE;&#x6539;&#x63D0;&#x4EA4;&#x4E2D;&#x7684;&#x66F4;&#x6539;&#xFF1A;
+git reset --hard HEAD~1
+1
+git reset --hard HEAD~1
+&#x73B0;&#x5728;B&#x662F; HEAD&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x4F7F;&#x7528;&#x4E86; --hard&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x7684;&#x6587;&#x4EF6;&#x5C06;&#x91CD;&#x7F6E;&#x5230;&#x63D0;&#x4EA4; B &#x65F6;&#x7684;&#x72B6;&#x6001;&#x3002;
+
+&#x8981;&#x64A4;&#x9500;&#x63D0;&#x4EA4;&#x4F46;&#x4FDD;&#x7559;&#x66F4;&#x6539;&#xFF1A;
+git reset HEAD~1
+1
+git reset HEAD~1
+&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x544A;&#x8BC9; Git &#x5C06; HEAD &#x6307;&#x9488;&#x79FB;&#x56DE;&#xFF08;&#x540E;&#x79FB;&#xFF09;&#x4E00;&#x4E2A;&#x63D0;&#x4EA4;&#xFF08;B&#xFF09;&#xFF0C;&#x5E76;&#x4FDD;&#x7559;&#x6587;&#x4EF6;&#x539F;&#x6837;&#xFF0C;&#x7136;&#x540E;&#x4F60;&#x53EF;&#x4EE5; git status &#x6765;&#x663E;&#x793A;&#x4F60;&#x5DF2;&#x7ECF;&#x68C0;&#x5165; C &#x7684;&#x66F4;&#x6539;&#x3002;
+
+&#x64A4;&#x9500;&#x63D0;&#x4EA4;&#x4F46;&#x4FDD;&#x7559;&#x6587;&#x4EF6;&#x548C;&#x7D22;&#x5F15;&#xFF1A;
+git reset --soft HEAD~1
+1
+git reset --soft HEAD~1
+&#x6267;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#x540E;&#xFF0C;git status&#xFF0C;&#x4F60;&#x8BB2;&#x770B;&#x5230;&#x7D22;&#x5F15;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x8DDF;&#x4EE5;&#x524D;&#x4E00;&#x81F4;&#x3002;
+</code></pre><h2 id="8-&#x4EC0;&#x4E48;&#x662F;git-cherry-pick&#xFF1F;">8. &#x4EC0;&#x4E48;&#x662F;&#x201C;git cherry-pick&#x201D;&#xFF1F;</h2>
+<blockquote>
+<p>[!NOTE]
+&#x547D;&#x4EE4; git cherry-pick &#x901A;&#x5E38;&#x7528;&#x4E8E;&#x628A;&#x7279;&#x5B9A;&#x63D0;&#x4EA4;&#x4ECE;&#x5B58;&#x50A8;&#x4ED3;&#x5E93;&#x7684;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#x5F15;&#x5165;&#x5230;&#x5176;&#x4ED6;&#x5206;&#x652F;&#x4E2D;&#x3002;&#x5E38;&#x89C1;&#x7684;&#x7528;&#x9014;&#x662F;&#x4ECE;&#x7EF4;&#x62A4;&#x7684;&#x5206;&#x652F;&#x5230;&#x5F00;&#x53D1;&#x5206;&#x652F;&#x8FDB;&#x884C;&#x5411;&#x524D;&#x6216;&#x56DE;&#x6EDA;&#x63D0;&#x4EA4;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x4E0E;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&#x5408;&#x5E76;&#xFF08;merge&#xFF09;&#x3001;&#x53D8;&#x57FA;&#xFF08;rebase&#xFF09;&#xFF09;&#x5F62;&#x6210;&#x9C9C;&#x660E;&#x5BF9;&#x6BD4;&#xFF0C;&#x540E;&#x8005;&#x901A;&#x5E38;&#x662F;&#x628A;&#x8BB8;&#x591A;&#x63D0;&#x4EA4;&#x5E94;&#x7528;&#x5230;&#x5176;&#x4ED6;&#x5206;&#x652F;&#x4E2D;&#x3002;</p>
+<p>&#x5C0F;&#x7ED3;&#xFF1A;</p>
+<pre><code>git cherry-pick &lt;commit-hash&gt;
+1
+git cherry-pick &lt;commit-hash&gt;
+</code></pre><h2 id="9-&#x89E3;&#x91CA;-forking-&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x7684;&#x4F18;&#x70B9;">9. &#x89E3;&#x91CA; Forking &#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x7684;&#x4F18;&#x70B9;?</h2>
+<ol>
+<li><p>Forking &#x5DE5;&#x4F5C;&#x6D41;&#x7A0B; &#x4E0E;&#x5176;&#x4ED6;&#x6D41;&#x884C;&#x7684; Git &#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x6709;&#x7740;&#x6839;&#x672C;&#x7684;&#x533A;&#x522B;&#x3002;&#x5B83;&#x4E0D;&#x662F;&#x7528;&#x5355;&#x4E2A;&#x670D;&#x52A1;&#x7AEF;&#x4ED3;&#x5E93;&#x5145;&#x5F53;&#x201C;&#x4E2D;&#x592E;&#x201D;&#x4EE3;&#x7801;&#x5E93;&#xFF0C;&#x800C;&#x662F;&#x4E3A;&#x6BCF;&#x4E2A;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;&#x81EA;&#x5DF1;&#x7684;&#x670D;&#x52A1;&#x7AEF;&#x4ED3;&#x5E93;&#x3002;Forking &#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x6700;&#x5E38;&#x7528;&#x4E8E;&#x516C;&#x5171;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x4E2D;&#x3002;</p>
+</li>
+<li><p>Forking &#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x7684;&#x4E3B;&#x8981;&#x4F18;&#x70B9;&#x662F;&#x53EF;&#x4EE5;&#x6C47;&#x96C6;&#x63D0;&#x4EA4;&#x8D21;&#x732E;&#xFF0C;&#x53C8;&#x65E0;&#x9700;&#x6BCF;&#x4E2A;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4EA4;&#x5230;&#x4E00;&#x4E2A;&#x4E2D;&#x592E;&#x4ED3;&#x5E93;&#x4E2D;&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x5E72;&#x51C0;&#x7684;&#x9879;&#x76EE;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x63A8;&#x9001;&#xFF08;push&#xFF09;&#x4EE3;&#x7801;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x670D;&#x52A1;&#x7AEF;&#x4ED3;&#x5E93;&#xFF0C;&#x800C;&#x53EA;&#x6709;&#x9879;&#x76EE;&#x7EF4;&#x62A4;&#x4EBA;&#x5458;&#x624D;&#x80FD;&#x76F4;&#x63A5;&#x63A8;&#x9001;&#xFF08;push&#xFF09;&#x4EE3;&#x7801;&#x5230;&#x5B98;&#x65B9;&#x4ED3;&#x5E93;&#x4E2D;&#x3002;</p>
+</li>
+<li><p>&#x5F53;&#x5F00;&#x53D1;&#x8005;&#x51C6;&#x5907;&#x53D1;&#x5E03;&#x672C;&#x5730;&#x63D0;&#x4EA4;&#x65F6;&#xFF0C;&#x4ED6;&#x4EEC;&#x7684;&#x63D0;&#x4EA4;&#x4F1A;&#x63A8;&#x9001;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x516C;&#x5171;&#x4ED3;&#x5E93;&#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B98;&#x65B9;&#x4ED3;&#x5E93;&#x3002;&#x7136;&#x540E;&#x4ED6;&#x4EEC;&#x5411;&#x4E3B;&#x4ED3;&#x5E93;&#x63D0;&#x4EA4;&#x8BF7;&#x6C42;&#x62C9;&#x53D6;&#xFF08;pull request&#xFF09;&#xFF0C;&#x8FD9;&#x4F1A;&#x544A;&#x77E5;&#x9879;&#x76EE;&#x7EF4;&#x62A4;&#x4EBA;&#x5458;&#x6709;&#x53EF;&#x4EE5;&#x96C6;&#x6210;&#x7684;&#x66F4;&#x65B0;&#x3002;</p>
+</li>
+</ol>
+<h2 id="10-&#x544A;&#x8BC9;&#x6211;-git-&#x4E2D;-head&#x3001;&#x5DE5;&#x4F5C;&#x6811;&#x548C;&#x7D22;&#x5F15;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#xFF1F;">10. &#x544A;&#x8BC9;&#x6211; Git &#x4E2D; HEAD&#x3001;&#x5DE5;&#x4F5C;&#x6811;&#x548C;&#x7D22;&#x5F15;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#xFF1F;</h2>
+<ol>
+<li>&#x8BE5;&#x5DE5;&#x4F5C;&#x6811;/&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;/&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x662F;&#x4F60;&#x770B;&#x5230;&#x548C;&#x7F16;&#x8F91;&#x7684;&#xFF08;&#x6E90;&#xFF09;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;&#x6811;&#x3002;</li>
+<li>&#x8BE5;&#x7D22;&#x5F15;/&#x4E2D;&#x8F6C;&#x533A;&#xFF08;staging area&#xFF09;&#x662F;&#x4E2A;&#x5728; /.git/index&#xFF0C;&#x5355;&#x4E00;&#x7684;&#x3001;&#x5E9E;&#x5927;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x5217;&#x51FA;&#x4E86;&#x5F53;&#x524D;&#x5206;&#x652F;&#x4E2D;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x7684; SHA1 &#x68C0;&#x9A8C;&#x548C;&#x3001;&#x65F6;&#x95F4;&#x6233;&#x548C;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x5B83;&#x4E0D;&#x662F;&#x4E2A;&#x5E26;&#x6709;&#x6587;&#x4EF6;&#x526F;&#x672C;&#x7684;&#x76EE;&#x5F55;&#x3002;</li>
+<li>HEAD&#x662F;&#x5F53;&#x524D;&#x68C0;&#x51FA;&#x5206;&#x652F;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x5F15;&#x7528;/&#x6307;&#x9488;&#x3002;</li>
+</ol>
+<h2 id="11-&#x4F60;&#x80FD;&#x89E3;&#x91CA;&#x4E0B;-gitflow-&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x5417;&#xFF1F;">11. &#x4F60;&#x80FD;&#x89E3;&#x91CA;&#x4E0B; Gitflow &#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x5417;&#xFF1F;</h2>
+<blockquote>
+<p>[!NOTE]
+Gitflow &#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x5E76;&#x884C;&#x7684;&#x3001;&#x957F;&#x671F;&#x8FD0;&#x884C;&#x7684;&#x5206;&#x652F;&#x6765;&#x8BB0;&#x5F55;&#x9879;&#x76EE;&#x7684;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF0C;&#x5206;&#x522B;&#x662F; master &#x548C; develop &#x5206;&#x652F;&#x3002;</p>
+</blockquote>
+<ol>
+<li>Master&#xFF0C;&#x968F;&#x65F6;&#x51C6;&#x5907;&#x53D1;&#x5E03;&#x7EBF;&#x4E0A;&#x7248;&#x672C;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x5176;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x90FD;&#x662F;&#x7ECF;&#x8FC7;&#x5168;&#x9762;&#x6D4B;&#x8BD5;&#x548C;&#x6838;&#x51C6;&#x7684;&#xFF08;&#x751F;&#x4EA7;&#x5C31;&#x7EEA;&#xFF09;&#x3002;</li>
+<li>Hotfix&#xFF0C;&#x7EF4;&#x62A4;&#xFF08;maintenance&#xFF09;&#x6216;&#x4FEE;&#x590D;&#xFF08;hotfix&#xFF09;&#x5206;&#x652F;&#x662F;&#x7528;&#x4E8E;&#x7ED9;&#x5FEB;&#x901F;&#x7ED9;&#x751F;&#x4EA7;&#x7248;&#x672C;&#x4FEE;&#x590D;&#x6253;&#x8865;&#x4E01;&#x7684;&#x3002;&#x4FEE;&#x590D;&#xFF08;hotfix&#xFF09;&#x5206;&#x652F;&#x5F88;&#x50CF;&#x53D1;&#x5E03;&#xFF08;release&#xFF09;&#x5206;&#x652F;&#x548C;&#x529F;&#x80FD;&#xFF08;feature&#xFF09;&#x5206;&#x652F;&#xFF0C;&#x9664;&#x975E;&#x5B83;&#x4EEC;&#x662F;&#x57FA;&#x4E8E; master &#x800C;&#x4E0D;&#x662F; develop &#x5206;&#x652F;&#x3002;</li>
+<li>Develop&#xFF0C;&#x662F;&#x5408;&#x5E76;&#x6240;&#x6709;&#x529F;&#x80FD;&#xFF08;feature&#xFF09;&#x5206;&#x652F;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x6240;&#x6709;&#x6D4B;&#x8BD5;&#x7684;&#x5206;&#x652F;&#x3002;&#x53EA;&#x6709;&#x5F53;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x90FD;&#x7ECF;&#x8FC7;&#x5F7B;&#x5E95;&#x68C0;&#x67E5;&#x548C;&#x4FEE;&#x590D;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x5408;&#x5E76;&#x5230; master &#x5206;&#x652F;&#x3002;</li>
+<li>Feature&#xFF0C;&#x6BCF;&#x4E2A;&#x529F;&#x80FD;&#x90FD;&#x5E94;&#x7559;&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x5206;&#x652F;&#x4E2D;&#x5F00;&#x53D1;&#xFF0C;&#x53EF;&#x4EE5;&#x63A8;&#x9001;&#x5230; develop &#x5206;&#x652F;&#x4F5C;&#x4E3A;&#x529F;&#x80FD;&#xFF08;feature&#xFF09;&#x5206;&#x652F;&#x7684;&#x7236;&#x5206;&#x652F;&#x3002;</li>
+</ol>
+<h2 id="12-&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x5E94;&#x4F7F;&#x7528;-git-stash&#xFF1F;">12. &#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x5E94;&#x4F7F;&#x7528; &#x201C;git stash&#x201D;&#xFF1F;</h2>
+<blockquote>
+<p>[!NOTE]
+git stash &#x547D;&#x4EE4;&#x628A;&#x4F60;&#x672A;&#x63D0;&#x4EA4;&#x7684;&#x4FEE;&#x6539;&#xFF08;&#x5DF2;&#x6682;&#x5B58;&#xFF08;staged&#xFF09;&#x548C;&#x672A;&#x6682;&#x5B58;&#x7684;&#xFF08;unstaged&#xFF09;&#xFF09;&#x4FDD;&#x5B58;&#x4EE5;&#x4F9B;&#x540E;&#x7EED;&#x4F7F;&#x7528;&#xFF0C;&#x4EE5;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x5DE5;&#x4F5C;&#x526F;&#x672C;&#x4E2D;&#x8FDB;&#x884C;&#x8FD8;&#x539F;&#x3002;</p>
+</blockquote>
+<p>&#x56DE;&#x987E;&#xFF1A;</p>
+<pre><code>$ git status
+On branch master
+Changes to be committed:
+new file: style.css
+Changes not staged for commit:
+modified: index.html
+$ git stash
+Saved working directory and index state WIP on master: 5002d47 our new homepage
+HEAD is now at 5002d47 our new homepage
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git status
+On branch master
+Changes to be committed:
+new file: style.css
+Changes not staged for commit:
+modified: index.html
+$ git stash
+Saved working directory and index state WIP on master: 5002d47 our new homepage
+HEAD is now at 5002d47 our new homepage
+$ git status
+On branch master
+nothing to commit, working tree clean
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6682;&#x5B58;&#xFF08;stash&#xFF09;&#x7684;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x5728;&#x4E0A;&#x6B21;&#x63D0;&#x4EA4;&#x4E2D;&#x5FD8;&#x8BB0;&#x4E86;&#x67D0;&#x4E9B;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x4E14;&#x5DF2;&#x7ECF;&#x5F00;&#x59CB;&#x5728;&#x540C;&#x4E00;&#x5206;&#x652F;&#x4E2D;&#x5904;&#x7406;&#x4E0B;&#x4E00;&#x4E2A;&#x63D0;&#x4EA4;&#x4E86;&#xFF1A;
+
+# Assume the latest commit was already done
+# start working on the next patch, and discovered I was missing something
+
+# stash away the current mess I made
+$ git stash save
+
+# some changes in the working dir
+
+# and now add them to the last commit:
+$ git add -u
+$ git commit --ammend
+
+# back to work!
+$ git stash pop
+
+# Assume the latest commit was already done
+# start working on the next patch, and discovered I was missing something
+
+# stash away the current mess I made
+$ git stash save
+
+# some changes in the working dir
+
+# and now add them to the last commit:
+$ git add -u
+$ git commit --ammend
+
+# back to work!
+$ git stash pop
+</code></pre><h2 id="13-&#x5982;&#x4F55;&#x4ECE;-git-&#x4E2D;&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x5C06;&#x5176;&#x4ECE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#x5220;&#x9664;&#xFF1F;">13. &#x5982;&#x4F55;&#x4ECE; git &#x4E2D;&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x5C06;&#x5176;&#x4ECE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#x5220;&#x9664;&#xFF1F;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x5728; git add &#x8FC7;&#x7A0B;&#x4E2D;&#x8BEF;&#x64CD;&#x4F5C;&#xFF0C;&#x4F60;&#x6700;&#x7EC8;&#x4F1A;&#x6DFB;&#x52A0;&#x4E0D;&#x60F3;&#x63D0;&#x4EA4;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x4F46;&#x662F;&#xFF0C;git rm &#x5219;&#x4F1A;&#x628A;&#x4F60;&#x7684;&#x6587;&#x4EF6;&#x4ECE;&#x4F60;&#x6682;&#x5B58;&#x533A;&#xFF08;&#x7D22;&#x5F15;&#xFF09;&#x548C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF08;&#x5DE5;&#x4F5C;&#x6811;&#xFF09;&#x4E2D;&#x5220;&#x9664;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x4F60;&#x60F3;&#x8981;&#x7684;&#x3002;</p>
+<p>&#x6362;&#x6210; git reset &#x64CD;&#x4F5C;&#xFF1A;</p>
+<p>git reset filename          # or
+echo filename &gt;&gt; .gitingore # add it to .gitignore to avoid re-adding it
+1
+2
+git reset filename          # or
+echo filename &gt;&gt; .gitingore # add it to .gitignore to avoid re-adding it
+&#x4E0A;&#x9762;&#x610F;&#x601D;&#x662F;&#xFF0C;git reset <paths> &#x662F; git add <paths> &#x7684;&#x9006;&#x64CD;&#x4F5C;&#x3002;</paths></paths></p>
+<h2 id="14-&#x662F;&#x4E48;&#x65F6;&#x5019;&#x4F7F;&#x7528;git-rebase&#x4EE3;&#x66FF;git-merge&#xFF1F;">14. &#x662F;&#x4E48;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x201C;git rebase&#x201D;&#x4EE3;&#x66FF;&#x201C;git merge&#x201D;&#xFF1F;</h2>
+<blockquote>
+<p>[!NOTE]
+&#x8FD9;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x628A;&#x4FEE;&#x6539;&#x4ECE;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#x96C6;&#x6210;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#x4E0A;&#xFF0C;&#x5B83;&#x4EEC;&#x53EA;&#x662F;&#x4EE5;&#x975E;&#x5E38;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x3002;</p>
+</blockquote>
+<p>&#x8003;&#x8651;&#x4E00;&#x4E0B;&#x573A;&#x666F;&#xFF0C;&#x5728;&#x5408;&#x5E76;&#x548C;&#x53D8;&#x57FA;&#x524D;&#xFF1A;</p>
+<p>A &lt;- B &lt;- C    [master]
+^
+ \
+  D &lt;- E       [branch]
+1
+2
+3
+4
+A &lt;- B &lt;- C    [master]
+^
+ \
+  D &lt;- E       [branch]
+&#x5728; git merge master &#x4E4B;&#x540E;&#xFF1A;</p>
+<p>A &lt;- B &lt;- C
+^         ^
+ \         \
+  D &lt;- E &lt;- F
+1
+2
+3
+4
+A &lt;- B &lt;- C
+^         ^
+ \         \
+  D &lt;- E &lt;- F
+&#x5728; git rebase master &#x4E4B;&#x540E;&#xFF1A;</p>
+<p>A &lt;- B &lt;- C &lt;- D &lt;- E
+1
+A &lt;- B &lt;- C &lt;- D &lt;- E
+&#x4F7F;&#x7528;&#x53D8;&#x57FA;&#x65F6;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#x4F5C;&#x4E3A;&#x96C6;&#x6210;&#x4FEE;&#x6539;&#x7684;&#x65B0;&#x57FA;&#x7840;&#x3002;</p>
+<h3 id="141-&#x4F55;&#x65F6;&#x4F7F;&#x7528;">14.1 &#x4F55;&#x65F6;&#x4F7F;&#x7528;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x4FEE;&#x6539;&#x4E0D;&#x591F;&#x679C;&#x65AD;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x5408;&#x5E76;&#x64CD;&#x4F5C;&#x3002;
+&#x6839;&#x636E;&#x4F60;&#x5E0C;&#x671B;&#x7684;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x7684;&#x6837;&#x5B50;&#xFF0C;&#x800C;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x53D8;&#x57FA;&#x6216;&#x5408;&#x5E76;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="142-&#x66F4;&#x591A;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x56E0;&#x7D20;">14.2 &#x66F4;&#x591A;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x56E0;&#x7D20;</h3>
+<ol>
+<li>&#x5206;&#x652F;&#x662F;&#x5426;&#x4E0E;&#x56E2;&#x961F;&#x5916;&#x90E8;&#x7684;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5171;&#x4EAB;&#x4FEE;&#x6539;&#xFF08;&#x5982;&#x5F00;&#x6E90;&#x3001;&#x516C;&#x5F00;&#x9879;&#x76EE;&#xFF09;&#xFF1F;&#x5982;&#x679C;&#x662F;&#x8FD9;&#x6837;&#xFF0C;&#x8BF7;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x53D8;&#x57FA;&#x64CD;&#x4F5C;&#x3002;&#x53D8;&#x57FA;&#x4F1A;&#x7834;&#x574F;&#x5206;&#x652F;&#xFF0C;&#x9664;&#x975E;&#x4ED6;&#x4EEC;&#x4F7F;&#x7528; git pull --rebase&#xFF0C;&#x5426;&#x5219;&#x8FD9;&#x4E9B;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5C06;&#x4F1A;&#x5F97;&#x5230;&#x635F;&#x574F;&#x7684;&#x6216;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x4ED3;&#x5E93;&#x3002;</li>
+<li>&#x4F60;&#x7684;&#x5F00;&#x53D1;&#x56E2;&#x961F;&#x6280;&#x672F;&#x662F;&#x5426;&#x8DB3;&#x591F;&#x5A34;&#x719F;&#xFF1F;&#x53D8;&#x57FA;&#x662F;&#x4E00;&#x79CD;&#x7834;&#x574F;&#x6027;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x6B63;&#x786E;&#x4F7F;&#x7528;&#x5B83;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x4E22;&#x5931;&#x63D0;&#x4EA4;&#xFF0C;&#x5E76;&#x4E14;/&#x6216;&#x8005;&#x4F1A;&#x7834;&#x574F;&#x5176;&#x4ED6;&#x5F00;&#x53D1;&#x8005;&#x4ED3;&#x5E93;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x3002;</li>
+<li>&#x5206;&#x652F;&#x672C;&#x8EAB;&#x662F;&#x5426;&#x4EE3;&#x8868;&#x6709;&#x7528;&#x7684;&#x4FE1;&#x606F;&#xFF1F;&#x4E00;&#x4E9B;&#x56E2;&#x961F;&#x4F7F;&#x7528;&#x529F;&#x80FD;&#x5206;&#x652F;&#xFF08;branch-per-feature&#xFF09;&#x6A21;&#x5F0F;&#xFF0C;&#x6BCF;&#x4E2A;&#x5206;&#x652F;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#xFF08;&#x6216;&#x9519;&#x8BEF;&#x4FEE;&#x590D;&#xFF0C;&#x6216;&#x5B50;&#x529F;&#x80FD;&#x7B49;&#xFF09;&#x3002;&#x5728;&#x6B64;&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;&#x5206;&#x652F;&#x6709;&#x52A9;&#x4E8E;&#x8BC6;&#x522B;&#x76F8;&#x5173;&#x63D0;&#x4EA4;&#x7684;&#x96C6;&#x5408;&#x3002;&#x5728;&#x6BCF;&#x4E2A;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5206;&#x652F;&#xFF08;branch-per-developer&#xFF09;&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;&#x5206;&#x652F;&#x672C;&#x8EAB;&#x4E0D;&#x4F1A;&#x4F20;&#x8FBE;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#xFF08;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x5DF2;&#x6709;&#x4F5C;&#x8005;&#xFF09;&#x3002;&#x5219;&#x5728;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x53D8;&#x57FA;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x7834;&#x574F;&#x3002;</li>
+<li>&#x662F;&#x5426;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x90FD;&#x8981;&#x8FD8;&#x539F;&#x5408;&#x5E76;&#xFF1F;&#x6062;&#x590D;&#xFF08;&#x5982;&#x5728;&#x64A4;&#x9500;&#x4E2D;&#xFF09;&#x53D8;&#x57FA;&#xFF0C;&#x662F;&#x76F8;&#x5F53;&#x56F0;&#x96BE;&#x7684;&#xFF0C;&#x5E76;&#x4E14;/&#x6216;&#x8005;&#x5728;&#x53D8;&#x57FA;&#x4E2D;&#x5B58;&#x5728;&#x51B2;&#x7A81;&#x65F6;&#xFF0C;&#x662F;&#x4E0D;&#x53EF;&#x80FD;&#x5B8C;&#x6210;&#x7684;&#x3002;&#x5982;&#x679C;&#x4F60;&#x8003;&#x8651;&#x5230;&#x65E5;&#x540E;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x6062;&#x590D;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x5408;&#x5E76;&#x64CD;&#x4F5C;&#x3002;</li>
+</ol>
+<hr>
+<p><strong>&#x53C2;&#x8003;&#x8D44;&#x6599;</strong></p>
+<ul>
+<li>Git&#x5728;&#x7EBF;&#x5B66;&#x4E60;&#xFF1A;<a href="https://learngitbranching.js.org/?NODEMO" target="_blank">https://learngitbranching.js.org/?NODEMO</a></li>
+<li>&#x53C2;&#x8003;&#x535A;&#x5BA2;&#xFF1A;<a href="https://www.cnblogs.com/ludashi/p/8323617.html" target="_blank">https://www.cnblogs.com/ludashi/p/8323617.html</a>
+<div id="gitalk-container"></div><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script></li>
+</ul>
+</body></html>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		
+		<a href="2.Linux相关.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 5.2 Linux相关">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"5.1 Git相关","level":"1.6.1","depth":2,"next":{"title":"5.2 Linux相关","level":"1.6.2","depth":2,"path":"开发环境/2.Linux相关.md","ref":"开发环境/2.Linux相关.md","articles":[]},"previous":{"title":"五、开发环境","level":"1.6","depth":1,"ref":"","articles":[{"title":"5.1 Git相关","level":"1.6.1","depth":2,"path":"开发环境/1.Git相关.md","ref":"开发环境/1.Git相关.md","articles":[]},{"title":"5.2 Linux相关","level":"1.6.2","depth":2,"path":"开发环境/2.Linux相关.md","ref":"开发环境/2.Linux相关.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-fexa","back-to-top-button","theme-comscore","-page-copyright","github-buttons","-sharing","sharing-plus","splitter","expandable-chapters","lightbox","edit-link","copy-code-button","flexible-alerts","donate","gittalk"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"splitter":{},"search":{},"page-copyright":{"wisdom":"Designer, Frontend Developer & overall web enthusiast","noPowered":true,"copyright":"Copyright &#169; Front End Community","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"Front End Community","baseUri":"https://fecommunity.github.io/","copyrightColor":"#666","description":"modified at"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-fexa":{"search-placeholder":"输入关键字搜索","logo":"https://fecommunity.github.io/front-end-interview/img/logo.png","favicon":"./favicon.ico"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"https://fecommunity.github.io/front-end-interview/img/alipay.png","alipayText":"支付宝捐赠","button":"赏","title":"如果觉得不错，就发个红包请喝个咖啡吧~~~","wechat":"https://fecommunity.github.io/front-end-interview/img/wechat.png","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"github-buttons":{"buttons":[{"user":"fecommunity","repo":"front-end-interview","type":"star","size":"small","count":true}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"copy-code-button":{},"sharing":{"douban":true,"qq":true,"qzone":true,"weibo":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"]},"edit-link":{"label":"编辑此页面","base":"//github.com/fecommunity/front-end-interview/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"gittalk":{"clientID":"f9ee0ea75e03ca50cab9","clientSecret":"387dbdb6125ca9a453e0f75b5dba5ee23401f684","repo":"front-end-interview","owner":"fecommunity","admin":["fecommunity"],"distractionFreeMode":false,"labels":["问题建议"]},"expandable-chapters":{}},"theme":"default","author":"FE Community","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"https://github.com/fecommunity","target":"_blank","name":"前端社区"}]}},"title":"前端工程师面试宝典","gitbook":"*","description":"前端面试宝典，助你收获理想Offer！"},"file":{"path":"开发环境/1.Git相关.md","mtime":"2019-10-06T11:45:09.049Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-06T12:26:17.608Z"},"basePath":"..","book":{"language":""}});
+		});
+	</script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-gittalk/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

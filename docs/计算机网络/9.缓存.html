@@ -1,0 +1,2010 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.9 缓存 · 前端工程师面试宝典</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="FE Community">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10.RESTful.html" />
+    
+    
+    <link rel="prev" href="8.CDN.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"fecommunity","repo":"front-end-interview","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+		<span class="title"></span>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			<li>
+				<a href="https://github.com/fecommunity" target="_blank">前端社区</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">文档目录</div>
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    本书介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    一、前端知识体系
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    1.1 HTML相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../前端知识体系/HTML相关/1.HTML基础强化.html">
+            
+                <a href="../前端知识体系/HTML相关/1.HTML基础强化.html">
+            
+                    
+                    1.1.1 HTML基础强化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    1.2 CSS相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../前端知识体系/CSS相关/1.CSS基础.html">
+            
+                <a href="../前端知识体系/CSS相关/1.CSS基础.html">
+            
+                    
+                    1.2.1 CSS基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../前端知识体系/CSS相关/2.CSS布局.html">
+            
+                <a href="../前端知识体系/CSS相关/2.CSS布局.html">
+            
+                    
+                    1.2.2 CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../前端知识体系/CSS相关/3.CSS效果.html">
+            
+                <a href="../前端知识体系/CSS相关/3.CSS效果.html">
+            
+                    
+                    1.2.3 CSS效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../前端知识体系/CSS相关/4.CSS动画.html">
+            
+                <a href="../前端知识体系/CSS相关/4.CSS动画.html">
+            
+                    
+                    1.2.4 CSS动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../前端知识体系/CSS相关/5.预处理器.html">
+            
+                <a href="../前端知识体系/CSS相关/5.预处理器.html">
+            
+                    
+                    1.2.5 预处理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../前端知识体系/CSS相关/6.Bootstrap.html">
+            
+                <a href="../前端知识体系/CSS相关/6.Bootstrap.html">
+            
+                    
+                    1.2.6 Bootstrap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="../前端知识体系/CSS相关/7.CSS工程化方案.html">
+            
+                <a href="../前端知识体系/CSS相关/7.CSS工程化方案.html">
+            
+                    
+                    1.2.6 CSS工程化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    1.3 JavaScript相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../前端知识体系/JS相关/1.JS基础知识.html">
+            
+                <a href="../前端知识体系/JS相关/1.JS基础知识.html">
+            
+                    
+                    1.3.1 JS基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../前端知识体系/JS相关/2.JS-Web-API.html">
+            
+                <a href="../前端知识体系/JS相关/2.JS-Web-API.html">
+            
+                    
+                    1.3.2 JS-Web-API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../前端知识体系/JS相关/3.开发环境.html">
+            
+                <a href="../前端知识体系/JS相关/3.开发环境.html">
+            
+                    
+                    1.3.3 开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../前端知识体系/JS相关/4.运行环境.html">
+            
+                <a href="../前端知识体系/JS相关/4.运行环境.html">
+            
+                    
+                    1.3.4 运行环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../前端知识体系/JS相关/5.ES6专题系列.html">
+            
+                <a href="../前端知识体系/JS相关/5.ES6专题系列.html">
+            
+                    
+                    1.3.5 ES6专题系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../前端知识体系/JS相关/6.虚拟DOM.html">
+            
+                <a href="../前端知识体系/JS相关/6.虚拟DOM.html">
+            
+                    
+                    1.3.6 虚拟DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../前端知识体系/JS相关/7.组件化和React.html">
+            
+                <a href="../前端知识体系/JS相关/7.组件化和React.html">
+            
+                    
+                    1.3.7 组件化和React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.8" data-path="../前端知识体系/JS相关/8.MVVM和Vue.html">
+            
+                <a href="../前端知识体系/JS相关/8.MVVM和Vue.html">
+            
+                    
+                    1.3.8 MVVM和Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.9" data-path="../前端知识体系/JS相关/9.移动端和Hybrid.html">
+            
+                <a href="../前端知识体系/JS相关/9.移动端和Hybrid.html">
+            
+                    
+                    1.3.9 移动端和Hybrid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.10" data-path="../前端知识体系/JS相关/10.原型.html">
+            
+                <a href="../前端知识体系/JS相关/10.原型.html">
+            
+                    
+                    1.3.10 原型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.11" data-path="../前端知识体系/JS相关/11.异步.html">
+            
+                <a href="../前端知识体系/JS相关/11.异步.html">
+            
+                    
+                    1.3.11 异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.12" data-path="../前端知识体系/JS相关/12.正则.html">
+            
+                <a href="../前端知识体系/JS相关/12.正则.html">
+            
+                    
+                    1.3.12 正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.13" data-path="../前端知识体系/JS相关/13.函数.html">
+            
+                <a href="../前端知识体系/JS相关/13.函数.html">
+            
+                    
+                    1.3.13 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    1.4 流行框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../前端知识体系/流行框架/1.React相关.html">
+            
+                <a href="../前端知识体系/流行框架/1.React相关.html">
+            
+                    
+                    1.4.1 React相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../前端知识体系/流行框架/2.Vue相关.html">
+            
+                <a href="../前端知识体系/流行框架/2.Vue相关.html">
+            
+                    
+                    1.4.2 Vue相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../前端知识体系/流行框架/3.Angular相关.html">
+            
+                <a href="../前端知识体系/流行框架/3.Angular相关.html">
+            
+                    
+                    1.4.3 Angular相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    1.5 NodeJS相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../前端知识体系/NodeJS相关/1.基础知识.html">
+            
+                <a href="../前端知识体系/NodeJS相关/1.基础知识.html">
+            
+                    
+                    1.5.1 基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../前端知识体系/NodeJS相关/2.模块机制.html">
+            
+                <a href="../前端知识体系/NodeJS相关/2.模块机制.html">
+            
+                    
+                    1.5.2 模块机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../前端知识体系/NodeJS相关/3.EventLoop.html">
+            
+                <a href="../前端知识体系/NodeJS相关/3.EventLoop.html">
+            
+                    
+                    1.5.3 EventLoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../前端知识体系/NodeJS相关/4.中间件.html">
+            
+                <a href="../前端知识体系/NodeJS相关/4.中间件.html">
+            
+                    
+                    1.5.4 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../前端知识体系/NodeJS相关/5.面试题.html">
+            
+                <a href="../前端知识体系/NodeJS相关/5.面试题.html">
+            
+                    
+                    1.5.5 面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    1.6 性能优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../前端知识体系/性能优化/1.雅虎军规14条.html">
+            
+                <a href="../前端知识体系/性能优化/1.雅虎军规14条.html">
+            
+                    
+                    1.6.1 雅虎军规14条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../前端知识体系/性能优化/2.网络优化.html">
+            
+                <a href="../前端知识体系/性能优化/2.网络优化.html">
+            
+                    
+                    1.6.2 网络优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../前端知识体系/性能优化/3.重绘回流.html">
+            
+                <a href="../前端知识体系/性能优化/3.重绘回流.html">
+            
+                    
+                    1.6.3 重绘回流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../前端知识体系/性能优化/4.浏览器缓存.html">
+            
+                <a href="../前端知识体系/性能优化/4.浏览器缓存.html">
+            
+                    
+                    1.6.4 浏览器缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="../前端知识体系/性能优化/5.CDN加速.html">
+            
+                <a href="../前端知识体系/性能优化/5.CDN加速.html">
+            
+                    
+                    1.6.5 CDN加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.6" data-path="../前端知识体系/性能优化/6.Webpack性能优化.html">
+            
+                <a href="../前端知识体系/性能优化/6.Webpack性能优化.html">
+            
+                    
+                    1.6.6 Webpack性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.7" data-path="../前端知识体系/性能优化/7.其他技术.html">
+            
+                <a href="../前端知识体系/性能优化/7.其他技术.html">
+            
+                    
+                    1.5.7 其他技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.8" data-path="../前端知识体系/性能优化/8.performance性能监控.html">
+            
+                <a href="../前端知识体系/性能优化/8.performance性能监控.html">
+            
+                    
+                    1.5.8 performance性能监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
+            
+                <span>
+            
+                    
+                    1.7 前端工程化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="../前端知识体系/前端工程化/1.Webpack常见面试题.html">
+            
+                <a href="../前端知识体系/前端工程化/1.Webpack常见面试题.html">
+            
+                    
+                    1.7.1 Webpack常见面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" >
+            
+                <span>
+            
+                    
+                    1.8 错误监控
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="../前端知识体系/错误监控/1.错误监控和上报.html">
+            
+                <a href="../前端知识体系/错误监控/1.错误监控和上报.html">
+            
+                    
+                    1.8.1 错误监控和上报
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="../前端知识体系/错误监控/2.异常捕获问题.html">
+            
+                <a href="../前端知识体系/错误监控/2.异常捕获问题.html">
+            
+                    
+                    1.8.2 异常捕获问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" >
+            
+                <span>
+            
+                    
+                    1.9 Web安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="../前端知识体系/Web安全/1.XSS攻击.html">
+            
+                <a href="../前端知识体系/Web安全/1.XSS攻击.html">
+            
+                    
+                    1.9.1 XSS攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.2" data-path="../前端知识体系/Web安全/2.CSRF攻击.html">
+            
+                <a href="../前端知识体系/Web安全/2.CSRF攻击.html">
+            
+                    
+                    1.9.2 CSRF攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    二、计算机网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1.TCP.html">
+            
+                <a href="1.TCP.html">
+            
+                    
+                    2.1 TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2.UDP.html">
+            
+                <a href="2.UDP.html">
+            
+                    
+                    2.2 UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3.HTTP.html">
+            
+                <a href="3.HTTP.html">
+            
+                    
+                    2.3 HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="4.HTTPS.html">
+            
+                <a href="4.HTTPS.html">
+            
+                    
+                    2.4 HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="5.Ajax.html">
+            
+                <a href="5.Ajax.html">
+            
+                    
+                    2.5 Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="6.Websocket.html">
+            
+                <a href="6.Websocket.html">
+            
+                    
+                    2.6 Websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="7.Nginx.html">
+            
+                <a href="7.Nginx.html">
+            
+                    
+                    2.7 Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="8.CDN.html">
+            
+                <a href="8.CDN.html">
+            
+                    
+                    2.8 CDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.9" data-path="9.缓存.html">
+            
+                <a href="9.缓存.html">
+            
+                    
+                    2.9 缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="10.RESTful.html">
+            
+                <a href="10.RESTful.html">
+            
+                    
+                    2.10 RESTful
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="11.Cookie和Session.html">
+            
+                <a href="11.Cookie和Session.html">
+            
+                    
+                    2.11 Cookie和Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="12.输入URL请求细节.html">
+            
+                <a href="12.输入URL请求细节.html">
+            
+                    
+                    2.12 输入URL请求细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="13.跨域.html">
+            
+                <a href="13.跨域.html">
+            
+                    
+                    2.13 跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    三、操作系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../操作系统/1.基础知识.html">
+            
+                <a href="../操作系统/1.基础知识.html">
+            
+                    
+                    3.1 基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../操作系统/2.面试题.html">
+            
+                <a href="../操作系统/2.面试题.html">
+            
+                    
+                    3.2 面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    四、数据结构与算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../数据结构与算法/1.数据结构.html">
+            
+                <a href="../数据结构与算法/1.数据结构.html">
+            
+                    
+                    4.1 数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../数据结构与算法/2.算法设计.html">
+            
+                <a href="../数据结构与算法/2.算法设计.html">
+            
+                    
+                    4.2 算法相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    五、开发环境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../开发环境/1.Git相关.html">
+            
+                <a href="../开发环境/1.Git相关.html">
+            
+                    
+                    5.1 Git相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../开发环境/2.Linux相关.html">
+            
+                <a href="../开发环境/2.Linux相关.html">
+            
+                    
+                    5.2 Linux相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    六、编程题与分析题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../编程题与分析题/1.继承的多种实现方式.html">
+            
+                <a href="../编程题与分析题/1.继承的多种实现方式.html">
+            
+                    
+                    6.1 继承的多种实现方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../编程题与分析题/2.call、bind、apply的实现.html">
+            
+                <a href="../编程题与分析题/2.call、bind、apply的实现.html">
+            
+                    
+                    6.2 call、bind、apply的实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../编程题与分析题/3.new的实现原理.html">
+            
+                <a href="../编程题与分析题/3.new的实现原理.html">
+            
+                    
+                    6.3 new的实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../编程题与分析题/4.防抖节流实现.html">
+            
+                <a href="../编程题与分析题/4.防抖节流实现.html">
+            
+                    
+                    6.4 防抖节流实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../编程题与分析题/5.观察者设计模式.html">
+            
+                <a href="../编程题与分析题/5.观察者设计模式.html">
+            
+                    
+                    6.5 观察者设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../编程题与分析题/6.深浅拷贝.html">
+            
+                <a href="../编程题与分析题/6.深浅拷贝.html">
+            
+                    
+                    6.6 深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../编程题与分析题/7.DOM树遍历.html">
+            
+                <a href="../编程题与分析题/7.DOM树遍历.html">
+            
+                    
+                    6.7 DOM树遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../编程题与分析题/8.类型检测.html">
+            
+                <a href="../编程题与分析题/8.类型检测.html">
+            
+                    
+                    6.8 类型检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../编程题与分析题/9.闭包问题.html">
+            
+                <a href="../编程题与分析题/9.闭包问题.html">
+            
+                    
+                    6.9 闭包问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../编程题与分析题/10.异步问题.html">
+            
+                <a href="../编程题与分析题/10.异步问题.html">
+            
+                    
+                    6.10 异步问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../编程题与分析题/11.排序算法.html">
+            
+                <a href="../编程题与分析题/11.排序算法.html">
+            
+                    
+                    6.11 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../编程题与分析题/12.搜索算法.html">
+            
+                <a href="../编程题与分析题/12.搜索算法.html">
+            
+                    
+                    6.12 搜索算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../编程题与分析题/13.常见算法.html">
+            
+                <a href="../编程题与分析题/13.常见算法.html">
+            
+                    
+                    6.13 常见算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../编程题与分析题/14.this指向.html">
+            
+                <a href="../编程题与分析题/14.this指向.html">
+            
+                    
+                    6.14 this指向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../编程题与分析题/15.arguments参数.html">
+            
+                <a href="../编程题与分析题/15.arguments参数.html">
+            
+                    
+                    6.15 arguments参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="../编程题与分析题/16.Promise实现原理.html">
+            
+                <a href="../编程题与分析题/16.Promise实现原理.html">
+            
+                    
+                    6.16 Promise实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.17" data-path="../编程题与分析题/17.函数curry化.html">
+            
+                <a href="../编程题与分析题/17.函数curry化.html">
+            
+                    
+                    6.17 函数Curry化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.18" data-path="../编程题与分析题/18.数组去重.html">
+            
+                <a href="../编程题与分析题/18.数组去重.html">
+            
+                    
+                    6.18 数组去重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.19" data-path="../编程题与分析题/19.数组扁平化.html">
+            
+                <a href="../编程题与分析题/19.数组扁平化.html">
+            
+                    
+                    6.19 数组扁平化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.20" data-path="../编程题与分析题/20.求数组最大值和最小值.html">
+            
+                <a href="../编程题与分析题/20.求数组最大值和最小值.html">
+            
+                    
+                    6.20 求数组最大最小值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.21" data-path="../编程题与分析题/21.模拟实现私有变量.html">
+            
+                <a href="../编程题与分析题/21.模拟实现私有变量.html">
+            
+                    
+                    6.21 模拟实现私有变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.22" data-path="../编程题与分析题/22.for of与迭代器.html">
+            
+                <a href="../编程题与分析题/22.for of与迭代器.html">
+            
+                    
+                    6.22 for of与迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.23" data-path="../编程题与分析题/23.Generator的执行细节分析.html">
+            
+                <a href="../编程题与分析题/23.Generator的执行细节分析.html">
+            
+                    
+                    6.23 Generator的执行细节分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.24" data-path="../编程题与分析题/24.模板字符串的高级用法.html">
+            
+                <a href="../编程题与分析题/24.模板字符串的高级用法.html">
+            
+                    
+                    6.24 模板字符串的高级用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.25" data-path="../编程题与分析题/25.通用的forEach函数.html">
+            
+                <a href="../编程题与分析题/25.通用的forEach函数.html">
+            
+                    
+                    6.25 通用的forEach函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.26" data-path="../编程题与分析题/26.判断两个对象相等.html">
+            
+                <a href="../编程题与分析题/26.判断两个对象相等.html">
+            
+                    
+                    6.26 判断两个对象相等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.27" data-path="../编程题与分析题/27.实现乱序函数.html">
+            
+                <a href="../编程题与分析题/27.实现乱序函数.html">
+            
+                    
+                    6.27 实现乱序函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    七、面经系列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../面经系列/0.面试技巧.html">
+            
+                <a href="../面经系列/0.面试技巧.html">
+            
+                    
+                    7.0 面试技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../面经系列/1.阿里面经.html">
+            
+                <a href="../面经系列/1.阿里面经.html">
+            
+                    
+                    7.1 阿里面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../面经系列/2.腾讯面经.html">
+            
+                <a href="../面经系列/2.腾讯面经.html">
+            
+                    
+                    7.2 腾讯面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../面经系列/3.百度面经.html">
+            
+                <a href="../面经系列/3.百度面经.html">
+            
+                    
+                    7.3 百度面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../面经系列/4.头条面经.html">
+            
+                <a href="../面经系列/4.头条面经.html">
+            
+                    
+                    7.4 头条面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../面经系列/5.美团面经.html">
+            
+                <a href="../面经系列/5.美团面经.html">
+            
+                    
+                    7.5 美团面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    八、结束
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../总结/1.前端总结.html">
+            
+                <a href="../总结/1.前端总结.html">
+            
+                    
+                    8.1 前端总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../总结/2.参考资料.html">
+            
+                <a href="../总结/2.参考资料.html">
+            
+                    
+                    8.2 参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<!-- Content nav -->
+	<div class="book-anchor">
+		<div class="book-anchor-title">在这篇文章中:</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.9 缓存</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<html><head></head><body><h1 id="&#x7F13;&#x5B58;">&#x7F13;&#x5B58;</h1>
+<h2 id="1-&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;http&#x7684;&#x7F13;&#x5B58;&#xFF1F;&#xFF08;&#x9762;&#x8BD5;&#x91CD;&#x70B9;&#xFF09;">1. &#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;HTTP&#x7684;&#x7F13;&#x5B58;&#xFF1F;&#xFF08;&#x9762;&#x8BD5;&#x91CD;&#x70B9;&#xFF09;</h2>
+<blockquote>
+<p>[!NOTE]
+Http &#x7684;&#x7F13;&#x5B58;&#x4E3B;&#x8981;&#x5229;&#x7528; header &#x91CC;&#x7684;Cache-control &#x548C; ETag</p>
+</blockquote>
+<h3 id="11-cache-control">1.1 Cache-control</h3>
+<p><code>Cache-control</code>&#x4E3B;&#x8981;&#x5305;&#x542B;&#x4EE5;&#x53CA;&#x51E0;&#x4E2A;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<ul>
+<li>public<ul>
+<li>&#x6307;HTTP&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x7684;&#x8D44;&#x6E90;&#x5728;&#x6240;&#x7ECF;&#x8FC7;&#x7684;&#x6240;&#x6709;&#x8DEF;&#x5F84;&#x5305;&#x62EC;&#x4E00;&#x4E9B;&#x4E2D;&#x95F4;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x4EE5;&#x53CA;&#x53D1;&#x51FA;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x7F13;&#x5B58;</li>
+</ul>
+</li>
+<li>private<ul>
+<li>&#x4EE3;&#x8868;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x624D;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x7F13;&#x5B58;</li>
+</ul>
+</li>
+<li>no-cache<ul>
+<li>&#x6307;&#x53EF;&#x4EE5;&#x5B58;&#x7F13;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x6BCF;&#x6B21;&#x4F7F;&#x7528;&#x90FD;&#x9700;&#x8981;&#x53BB;&#x670D;&#x52A1;&#x7AEF;&#x9A8C;&#x8BC1;</li>
+</ul>
+</li>
+<li>no-store<ul>
+<li>&#x672C;&#x5730;&#x548C;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x90FD;&#x4E0D;&#x5141;&#x8BB8;&#x53BB;&#x7F13;&#x5B58;</li>
+</ul>
+</li>
+<li>no-transform<ul>
+<li>&#x4E0D;&#x5141;&#x8BB8;&#x4EE3;&#x7406;/&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x5668;&#x8F6C;&#x6362;&#x6587;&#x4EF6;&#x683C;&#x5F0F;</li>
+</ul>
+</li>
+</ul>
+<p>&#x5230;&#x671F;</p>
+<ul>
+<li>max-age=<seconds\><ul>
+<li>&#x7F13;&#x5B58;&#x5230;&#x671F;&#x65F6;&#x95F4;</li>
+</ul>
+</seconds\></li>
+<li>s-maxage=<seconds\><ul>
+<li>&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x4E13;&#x7528;</li>
+</ul>
+</seconds\></li>
+<li>max-stale=<seconds\><ul>
+<li>&#x6307;&#x793A;&#x5BA2;&#x6237;&#x673A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8D85;&#x51FA;max-age&#x65F6;&#x95F4;&#x7684;&#x54CD;&#x5E94;</li>
+</ul>
+</seconds\></li>
+</ul>
+<p>&#x91CD;&#x65B0;&#x9A8C;&#x8BC1;</p>
+<ul>
+<li>must-revalidate<ul>
+<li>&#x8BBE;&#x7F6E;&#x4E86;max-age&#x7684;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x540E;&#x5FC5;&#x987B;&#x5230;&#x6E90;&#x670D;&#x52A1;&#x7AEF;&#x9A8C;&#x8BC1;&#x8D44;&#x6E90;&#x662F;&#x5426;&#x8FD8;&#x53EF;&#x7528;</li>
+</ul>
+</li>
+<li>proxy-revalidate<ul>
+<li>&#xFF08;&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x5668;&#x7528;&#xFF09;&#x8BBE;&#x7F6E;&#x4E86;max-age&#x7684;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x540E;&#x5FC5;&#x987B;&#x5230;&#x6E90;&#x670D;&#x52A1;&#x7AEF;&#x9A8C;&#x8BC1;&#x8D44;&#x6E90;&#x662F;&#x5426;&#x8FD8;&#x53EF;&#x7528;</li>
+</ul>
+</li>
+</ul>
+<h3 id="12-etag">1.2 ETag</h3>
+<blockquote>
+<p>[!NOTE]
+<code>ETag</code>:&#x5373;&#x7528;&#x6765;&#x8FDB;&#x884C;&#x5BF9;&#x6BD4;&#x7F13;&#x5B58;&#xFF0C;Etag &#x662F;&#x670D;&#x52A1;&#x7AEF;&#x8D44;&#x6E90;&#x7684;&#x4E00;&#x4E2A;&#x6807;&#x8BC6;&#x7801;</p>
+</blockquote>
+<p>&#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7B2C;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x65F6;&#x670D;&#x52A1;&#x7AEF;&#x4F1A;&#x4E0B;&#x53D1;&#x5F53;&#x524D;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x7684;&#x6807;&#x8BC6;&#x7801; Etag&#xFF0C;&#x4E0B;&#x6B21;&#x518D;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5219;&#x4F1A;&#x901A;&#x8FC7; header &#x91CC;&#x7684; If-None-Match &#x5C06;&#x8FD9;&#x4E2A;&#x6807;&#x8BC6;&#x7801; Etag &#x5E26;&#x4E0A;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x5C06;&#x5BA2;&#x6237;&#x7AEF;&#x4F20;&#x6765;&#x7684; Etag &#x4E0E;&#x6700;&#x65B0;&#x7684;&#x8D44;&#x6E90; Etag &#x505A;&#x5BF9;&#x6BD4;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x6837;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x8D44;&#x6E90;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#xFF0C;&#x8FD4;&#x56DE; 304&#x3002;</p>
+<h3 id="13-&#x7F13;&#x5B58;&#x65B9;&#x6848;">1.3 &#x7F13;&#x5B58;&#x65B9;&#x6848;</h3>
+<h4 id="131-&#x9700;&#x6C42;">1.3.1 &#x9700;&#x6C42;</h4>
+<p>&#x6709;&#x7684;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x4F1A;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x8F83;&#x957F;&#x7684;&#x7F13;&#x5B58;&#x65F6;&#x95F4;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x7528;&#x6237;&#x8FD8;&#x662F;&#x80FD;&#x4F7F;&#x7528;&#x6700;&#x65B0;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+<h4 id="132-&#x89E3;&#x51B3;&#x65B9;&#x6848;">1.3.2 &#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
+<p>&#x5728;&#x6253;&#x5305;&#x5B8C;&#x6210;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x4E0A;&#x52A0;&#x4E0A;&#x4E00;&#x4E32;&#x54C8;&#x5E0C;&#x7801;&#xFF0C;&#x8FD9;&#x4E2A;&#x54C8;&#x5E0C;&#x7801;&#x662F;&#x6839;&#x636E;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x7684;&#x54C8;&#x5E0C;&#x8BA1;&#x7B97;&#x3002;
+&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x5185;&#x5BB9;&#x6587;&#x4EF6;&#x6CA1;&#x6709;&#x53D8;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;hash&#x7801;&#x4E0D;&#x4F1A;&#x53D8;&#xFF0C;&#x5373;&#x8FD9;&#x4E2A;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x7684;url&#x6CA1;&#x6709;&#x53D8;&#x3002; &#x800C;&#x5982;&#x679C;&#x5185;&#x5BB9;&#x6709;&#x53D8;&#xFF0C;&#x90A3;&#x4E48;hash&#x7801;&#x4E5F;&#x4F1A;&#x53D8;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x4F1A;&#x53BB;&#x8BF7;&#x6C42;&#x65B0;&#x7684;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x3002;</p>
+<h4 id="133-&#x666E;&#x901A;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#x91CD;&#x70B9;&#x7406;&#x89E3;">1.3.3 &#x666E;&#x901A;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;(&#x91CD;&#x70B9;&#x7406;&#x89E3;)</h4>
+<p><a href="../img/browser-cache.jpg" data-lightbox="9bd2444e-61c4-4b40-9fa7-1bf3c926a343" data-title="&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;"><img src="../img/browser-cache.jpg" alt="&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;"></a></p>
+<h3 id="14-&#x8D44;&#x6E90;&#x9A8C;&#x8BC1;">1.4 &#x8D44;&#x6E90;&#x9A8C;&#x8BC1;</h3>
+<blockquote>
+<p>[!NOTE]
+&#x5982;&#x679C;&#x7ED9;Cache-Control&#x8BBE;&#x7F6E;&#x4E86;no-cache&#x540E;&#xFF0C;&#x6BCF;&#x6B21;&#x8981;&#x4F7F;&#x7528;&#x8D44;&#x6E90;&#x65F6;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x8981;&#x5230;&#x670D;&#x52A1;&#x5668;&#x9A8C;&#x8BC1;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x8FC7;&#x671F;&#x3002; &#x5982;&#x679C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#xFF0C;&#x8FD4;&#x56DE;&#x7801;&#xFF1A;<strong>304</strong></p>
+</blockquote>
+<p>&#x5982;&#x4F55;&#x9A8C;&#x8BC1;&#x8D44;&#x6E90;&#x662F;&#x5426;&#x8FC7;&#x671F;&#xFF1A;</p>
+<ul>
+<li><p>Last-Modified&#xFF08;&#x4E0A;&#x6B21;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF09;</p>
+<ul>
+<li>&#x914D;&#x5408; If-Modified-Since &#x6216; If-Unmodified-Since &#x4F7F;&#x7528;</li>
+<li>&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x7684;&#x8D44;&#x6E90;&#x5934;&#x4E2D;&#x6709;Last-Modified&#x8FD9;&#x4E2A;&#x5934;&#xFF0C;&#x8FD9;&#x4E2A;&#x5934;&#x6307;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x3002;&#x90A3;&#x4E48;&#x6D4F;&#x89C8;&#x5668;&#x91CD;&#x65B0;&#x8BBF;&#x95EE;&#x8D44;&#x6E90;&#x65F6;&#x5C31;&#x4F1A;&#x5E26;&#x4E0A;If-Modified-Since&#x8FD9;&#x4E2A;&#x5934;&#xFF0C;&#x5176;&#x65F6;&#x95F4;&#x662F;Last-Modified&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x62FF;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x53BB;&#x5BF9;&#x6BD4;&#x4E0A;&#x6B21;&#x4FEE;&#x6539;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x7136;&#x540E;&#x544A;&#x8BC9;&#x6D4F;&#x89C8;&#x5668;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+</li>
+<li><p>Etag &#xFF08;&#x6570;&#x636E;&#x7B7E;&#x540D;&#xFF09;</p>
+<ul>
+<li>&#x8D44;&#x6E90;&#x4F1A;&#x4F9D;&#x636E;&#x5B83;&#x7684;&#x5185;&#x5BB9;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x6570;&#x636E;&#x7B7E;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x8D44;&#x6E90;&#x6709;&#x66F4;&#x65B0;&#xFF0C;&#x90A3;&#x4E48;Etag&#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x3002;</li>
+<li>&#x914D;&#x5408; If-Match &#x6216; If-None-Match &#x4F7F;&#x7528;
+<div id="gitalk-container"></div><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script></li>
+</ul>
+</li>
+</ul>
+</body></html>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		<a href="8.CDN.html" class="navigation navigation-prev " aria-label="Previous page: 2.8 CDN">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="10.RESTful.html" class="navigation navigation-next " aria-label="Next page: 2.10 RESTful">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"2.9 缓存","level":"1.3.9","depth":2,"next":{"title":"2.10 RESTful","level":"1.3.10","depth":2,"path":"计算机网络/10.RESTful.md","ref":"计算机网络/10.RESTful.md","articles":[]},"previous":{"title":"2.8 CDN","level":"1.3.8","depth":2,"path":"计算机网络/8.CDN.md","ref":"计算机网络/8.CDN.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-fexa","back-to-top-button","theme-comscore","-page-copyright","github-buttons","-sharing","sharing-plus","splitter","expandable-chapters","lightbox","edit-link","copy-code-button","flexible-alerts","donate","gittalk"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"splitter":{},"search":{},"page-copyright":{"wisdom":"Designer, Frontend Developer & overall web enthusiast","noPowered":true,"copyright":"Copyright &#169; Front End Community","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"Front End Community","baseUri":"https://fecommunity.github.io/","copyrightColor":"#666","description":"modified at"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-fexa":{"search-placeholder":"输入关键字搜索","logo":"https://fecommunity.github.io/front-end-interview/img/logo.png","favicon":"./favicon.ico"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"https://fecommunity.github.io/front-end-interview/img/alipay.png","alipayText":"支付宝捐赠","button":"赏","title":"如果觉得不错，就发个红包请喝个咖啡吧~~~","wechat":"https://fecommunity.github.io/front-end-interview/img/wechat.png","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"github-buttons":{"buttons":[{"user":"fecommunity","repo":"front-end-interview","type":"star","size":"small","count":true}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"copy-code-button":{},"sharing":{"douban":true,"qq":true,"qzone":true,"weibo":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"]},"edit-link":{"label":"编辑此页面","base":"//github.com/fecommunity/front-end-interview/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"gittalk":{"clientID":"f9ee0ea75e03ca50cab9","clientSecret":"387dbdb6125ca9a453e0f75b5dba5ee23401f684","repo":"front-end-interview","owner":"fecommunity","admin":["fecommunity"],"distractionFreeMode":false,"labels":["问题建议"]},"expandable-chapters":{}},"theme":"default","author":"FE Community","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"https://github.com/fecommunity","target":"_blank","name":"前端社区"}]}},"title":"前端工程师面试宝典","gitbook":"*","description":"前端面试宝典，助你收获理想Offer！"},"file":{"path":"计算机网络/9.缓存.md","mtime":"2019-10-06T11:45:09.234Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-06T12:26:17.608Z"},"basePath":"..","book":{"language":""}});
+		});
+	</script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-gittalk/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

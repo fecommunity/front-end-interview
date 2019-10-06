@@ -1,0 +1,2090 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.8.2 异常捕获问题 · 前端工程师面试宝典</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="FE Community">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="1.错误监控和上报.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"fecommunity","repo":"front-end-interview","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+		<span class="title"></span>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			<li>
+				<a href="https://github.com/fecommunity" target="_blank">前端社区</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">文档目录</div>
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    本书介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    一、前端知识体系
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    1.1 HTML相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../HTML相关/1.HTML基础强化.html">
+            
+                <a href="../HTML相关/1.HTML基础强化.html">
+            
+                    
+                    1.1.1 HTML基础强化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    1.2 CSS相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../CSS相关/1.CSS基础.html">
+            
+                <a href="../CSS相关/1.CSS基础.html">
+            
+                    
+                    1.2.1 CSS基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../CSS相关/2.CSS布局.html">
+            
+                <a href="../CSS相关/2.CSS布局.html">
+            
+                    
+                    1.2.2 CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../CSS相关/3.CSS效果.html">
+            
+                <a href="../CSS相关/3.CSS效果.html">
+            
+                    
+                    1.2.3 CSS效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../CSS相关/4.CSS动画.html">
+            
+                <a href="../CSS相关/4.CSS动画.html">
+            
+                    
+                    1.2.4 CSS动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../CSS相关/5.预处理器.html">
+            
+                <a href="../CSS相关/5.预处理器.html">
+            
+                    
+                    1.2.5 预处理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../CSS相关/6.Bootstrap.html">
+            
+                <a href="../CSS相关/6.Bootstrap.html">
+            
+                    
+                    1.2.6 Bootstrap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="../CSS相关/7.CSS工程化方案.html">
+            
+                <a href="../CSS相关/7.CSS工程化方案.html">
+            
+                    
+                    1.2.6 CSS工程化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    1.3 JavaScript相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../JS相关/1.JS基础知识.html">
+            
+                <a href="../JS相关/1.JS基础知识.html">
+            
+                    
+                    1.3.1 JS基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../JS相关/2.JS-Web-API.html">
+            
+                <a href="../JS相关/2.JS-Web-API.html">
+            
+                    
+                    1.3.2 JS-Web-API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../JS相关/3.开发环境.html">
+            
+                <a href="../JS相关/3.开发环境.html">
+            
+                    
+                    1.3.3 开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../JS相关/4.运行环境.html">
+            
+                <a href="../JS相关/4.运行环境.html">
+            
+                    
+                    1.3.4 运行环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../JS相关/5.ES6专题系列.html">
+            
+                <a href="../JS相关/5.ES6专题系列.html">
+            
+                    
+                    1.3.5 ES6专题系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../JS相关/6.虚拟DOM.html">
+            
+                <a href="../JS相关/6.虚拟DOM.html">
+            
+                    
+                    1.3.6 虚拟DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../JS相关/7.组件化和React.html">
+            
+                <a href="../JS相关/7.组件化和React.html">
+            
+                    
+                    1.3.7 组件化和React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.8" data-path="../JS相关/8.MVVM和Vue.html">
+            
+                <a href="../JS相关/8.MVVM和Vue.html">
+            
+                    
+                    1.3.8 MVVM和Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.9" data-path="../JS相关/9.移动端和Hybrid.html">
+            
+                <a href="../JS相关/9.移动端和Hybrid.html">
+            
+                    
+                    1.3.9 移动端和Hybrid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.10" data-path="../JS相关/10.原型.html">
+            
+                <a href="../JS相关/10.原型.html">
+            
+                    
+                    1.3.10 原型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.11" data-path="../JS相关/11.异步.html">
+            
+                <a href="../JS相关/11.异步.html">
+            
+                    
+                    1.3.11 异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.12" data-path="../JS相关/12.正则.html">
+            
+                <a href="../JS相关/12.正则.html">
+            
+                    
+                    1.3.12 正则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.13" data-path="../JS相关/13.函数.html">
+            
+                <a href="../JS相关/13.函数.html">
+            
+                    
+                    1.3.13 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    1.4 流行框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../流行框架/1.React相关.html">
+            
+                <a href="../流行框架/1.React相关.html">
+            
+                    
+                    1.4.1 React相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../流行框架/2.Vue相关.html">
+            
+                <a href="../流行框架/2.Vue相关.html">
+            
+                    
+                    1.4.2 Vue相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../流行框架/3.Angular相关.html">
+            
+                <a href="../流行框架/3.Angular相关.html">
+            
+                    
+                    1.4.3 Angular相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    1.5 NodeJS相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../NodeJS相关/1.基础知识.html">
+            
+                <a href="../NodeJS相关/1.基础知识.html">
+            
+                    
+                    1.5.1 基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../NodeJS相关/2.模块机制.html">
+            
+                <a href="../NodeJS相关/2.模块机制.html">
+            
+                    
+                    1.5.2 模块机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../NodeJS相关/3.EventLoop.html">
+            
+                <a href="../NodeJS相关/3.EventLoop.html">
+            
+                    
+                    1.5.3 EventLoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../NodeJS相关/4.中间件.html">
+            
+                <a href="../NodeJS相关/4.中间件.html">
+            
+                    
+                    1.5.4 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../NodeJS相关/5.面试题.html">
+            
+                <a href="../NodeJS相关/5.面试题.html">
+            
+                    
+                    1.5.5 面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    1.6 性能优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../性能优化/1.雅虎军规14条.html">
+            
+                <a href="../性能优化/1.雅虎军规14条.html">
+            
+                    
+                    1.6.1 雅虎军规14条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../性能优化/2.网络优化.html">
+            
+                <a href="../性能优化/2.网络优化.html">
+            
+                    
+                    1.6.2 网络优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../性能优化/3.重绘回流.html">
+            
+                <a href="../性能优化/3.重绘回流.html">
+            
+                    
+                    1.6.3 重绘回流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../性能优化/4.浏览器缓存.html">
+            
+                <a href="../性能优化/4.浏览器缓存.html">
+            
+                    
+                    1.6.4 浏览器缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="../性能优化/5.CDN加速.html">
+            
+                <a href="../性能优化/5.CDN加速.html">
+            
+                    
+                    1.6.5 CDN加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.6" data-path="../性能优化/6.Webpack性能优化.html">
+            
+                <a href="../性能优化/6.Webpack性能优化.html">
+            
+                    
+                    1.6.6 Webpack性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.7" data-path="../性能优化/7.其他技术.html">
+            
+                <a href="../性能优化/7.其他技术.html">
+            
+                    
+                    1.5.7 其他技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.8" data-path="../性能优化/8.performance性能监控.html">
+            
+                <a href="../性能优化/8.performance性能监控.html">
+            
+                    
+                    1.5.8 performance性能监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
+            
+                <span>
+            
+                    
+                    1.7 前端工程化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="../前端工程化/1.Webpack常见面试题.html">
+            
+                <a href="../前端工程化/1.Webpack常见面试题.html">
+            
+                    
+                    1.7.1 Webpack常见面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" >
+            
+                <span>
+            
+                    
+                    1.8 错误监控
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="1.错误监控和上报.html">
+            
+                <a href="1.错误监控和上报.html">
+            
+                    
+                    1.8.1 错误监控和上报
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.8.2" data-path="2.异常捕获问题.html">
+            
+                <a href="2.异常捕获问题.html">
+            
+                    
+                    1.8.2 异常捕获问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" >
+            
+                <span>
+            
+                    
+                    1.9 Web安全
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="../Web安全/1.XSS攻击.html">
+            
+                <a href="../Web安全/1.XSS攻击.html">
+            
+                    
+                    1.9.1 XSS攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9.2" data-path="../Web安全/2.CSRF攻击.html">
+            
+                <a href="../Web安全/2.CSRF攻击.html">
+            
+                    
+                    1.9.2 CSRF攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    二、计算机网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../计算机网络/1.TCP.html">
+            
+                <a href="../../计算机网络/1.TCP.html">
+            
+                    
+                    2.1 TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../计算机网络/2.UDP.html">
+            
+                <a href="../../计算机网络/2.UDP.html">
+            
+                    
+                    2.2 UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../计算机网络/3.HTTP.html">
+            
+                <a href="../../计算机网络/3.HTTP.html">
+            
+                    
+                    2.3 HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../计算机网络/4.HTTPS.html">
+            
+                <a href="../../计算机网络/4.HTTPS.html">
+            
+                    
+                    2.4 HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../计算机网络/5.Ajax.html">
+            
+                <a href="../../计算机网络/5.Ajax.html">
+            
+                    
+                    2.5 Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../计算机网络/6.Websocket.html">
+            
+                <a href="../../计算机网络/6.Websocket.html">
+            
+                    
+                    2.6 Websocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../计算机网络/7.Nginx.html">
+            
+                <a href="../../计算机网络/7.Nginx.html">
+            
+                    
+                    2.7 Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../计算机网络/8.CDN.html">
+            
+                <a href="../../计算机网络/8.CDN.html">
+            
+                    
+                    2.8 CDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../计算机网络/9.缓存.html">
+            
+                <a href="../../计算机网络/9.缓存.html">
+            
+                    
+                    2.9 缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../../计算机网络/10.RESTful.html">
+            
+                <a href="../../计算机网络/10.RESTful.html">
+            
+                    
+                    2.10 RESTful
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../../计算机网络/11.Cookie和Session.html">
+            
+                <a href="../../计算机网络/11.Cookie和Session.html">
+            
+                    
+                    2.11 Cookie和Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../../计算机网络/12.输入URL请求细节.html">
+            
+                <a href="../../计算机网络/12.输入URL请求细节.html">
+            
+                    
+                    2.12 输入URL请求细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../../计算机网络/13.跨域.html">
+            
+                <a href="../../计算机网络/13.跨域.html">
+            
+                    
+                    2.13 跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    三、操作系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../操作系统/1.基础知识.html">
+            
+                <a href="../../操作系统/1.基础知识.html">
+            
+                    
+                    3.1 基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../操作系统/2.面试题.html">
+            
+                <a href="../../操作系统/2.面试题.html">
+            
+                    
+                    3.2 面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    四、数据结构与算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../数据结构与算法/1.数据结构.html">
+            
+                <a href="../../数据结构与算法/1.数据结构.html">
+            
+                    
+                    4.1 数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../数据结构与算法/2.算法设计.html">
+            
+                <a href="../../数据结构与算法/2.算法设计.html">
+            
+                    
+                    4.2 算法相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    五、开发环境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../开发环境/1.Git相关.html">
+            
+                <a href="../../开发环境/1.Git相关.html">
+            
+                    
+                    5.1 Git相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../开发环境/2.Linux相关.html">
+            
+                <a href="../../开发环境/2.Linux相关.html">
+            
+                    
+                    5.2 Linux相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    六、编程题与分析题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../编程题与分析题/1.继承的多种实现方式.html">
+            
+                <a href="../../编程题与分析题/1.继承的多种实现方式.html">
+            
+                    
+                    6.1 继承的多种实现方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../编程题与分析题/2.call、bind、apply的实现.html">
+            
+                <a href="../../编程题与分析题/2.call、bind、apply的实现.html">
+            
+                    
+                    6.2 call、bind、apply的实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../编程题与分析题/3.new的实现原理.html">
+            
+                <a href="../../编程题与分析题/3.new的实现原理.html">
+            
+                    
+                    6.3 new的实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../编程题与分析题/4.防抖节流实现.html">
+            
+                <a href="../../编程题与分析题/4.防抖节流实现.html">
+            
+                    
+                    6.4 防抖节流实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../编程题与分析题/5.观察者设计模式.html">
+            
+                <a href="../../编程题与分析题/5.观察者设计模式.html">
+            
+                    
+                    6.5 观察者设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../编程题与分析题/6.深浅拷贝.html">
+            
+                <a href="../../编程题与分析题/6.深浅拷贝.html">
+            
+                    
+                    6.6 深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../编程题与分析题/7.DOM树遍历.html">
+            
+                <a href="../../编程题与分析题/7.DOM树遍历.html">
+            
+                    
+                    6.7 DOM树遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../编程题与分析题/8.类型检测.html">
+            
+                <a href="../../编程题与分析题/8.类型检测.html">
+            
+                    
+                    6.8 类型检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../../编程题与分析题/9.闭包问题.html">
+            
+                <a href="../../编程题与分析题/9.闭包问题.html">
+            
+                    
+                    6.9 闭包问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../../编程题与分析题/10.异步问题.html">
+            
+                <a href="../../编程题与分析题/10.异步问题.html">
+            
+                    
+                    6.10 异步问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../../编程题与分析题/11.排序算法.html">
+            
+                <a href="../../编程题与分析题/11.排序算法.html">
+            
+                    
+                    6.11 排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../../编程题与分析题/12.搜索算法.html">
+            
+                <a href="../../编程题与分析题/12.搜索算法.html">
+            
+                    
+                    6.12 搜索算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../../编程题与分析题/13.常见算法.html">
+            
+                <a href="../../编程题与分析题/13.常见算法.html">
+            
+                    
+                    6.13 常见算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../../编程题与分析题/14.this指向.html">
+            
+                <a href="../../编程题与分析题/14.this指向.html">
+            
+                    
+                    6.14 this指向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../../编程题与分析题/15.arguments参数.html">
+            
+                <a href="../../编程题与分析题/15.arguments参数.html">
+            
+                    
+                    6.15 arguments参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="../../编程题与分析题/16.Promise实现原理.html">
+            
+                <a href="../../编程题与分析题/16.Promise实现原理.html">
+            
+                    
+                    6.16 Promise实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.17" data-path="../../编程题与分析题/17.函数curry化.html">
+            
+                <a href="../../编程题与分析题/17.函数curry化.html">
+            
+                    
+                    6.17 函数Curry化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.18" data-path="../../编程题与分析题/18.数组去重.html">
+            
+                <a href="../../编程题与分析题/18.数组去重.html">
+            
+                    
+                    6.18 数组去重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.19" data-path="../../编程题与分析题/19.数组扁平化.html">
+            
+                <a href="../../编程题与分析题/19.数组扁平化.html">
+            
+                    
+                    6.19 数组扁平化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.20" data-path="../../编程题与分析题/20.求数组最大值和最小值.html">
+            
+                <a href="../../编程题与分析题/20.求数组最大值和最小值.html">
+            
+                    
+                    6.20 求数组最大最小值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.21" data-path="../../编程题与分析题/21.模拟实现私有变量.html">
+            
+                <a href="../../编程题与分析题/21.模拟实现私有变量.html">
+            
+                    
+                    6.21 模拟实现私有变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.22" data-path="../../编程题与分析题/22.for of与迭代器.html">
+            
+                <a href="../../编程题与分析题/22.for of与迭代器.html">
+            
+                    
+                    6.22 for of与迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.23" data-path="../../编程题与分析题/23.Generator的执行细节分析.html">
+            
+                <a href="../../编程题与分析题/23.Generator的执行细节分析.html">
+            
+                    
+                    6.23 Generator的执行细节分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.24" data-path="../../编程题与分析题/24.模板字符串的高级用法.html">
+            
+                <a href="../../编程题与分析题/24.模板字符串的高级用法.html">
+            
+                    
+                    6.24 模板字符串的高级用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.25" data-path="../../编程题与分析题/25.通用的forEach函数.html">
+            
+                <a href="../../编程题与分析题/25.通用的forEach函数.html">
+            
+                    
+                    6.25 通用的forEach函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.26" data-path="../../编程题与分析题/26.判断两个对象相等.html">
+            
+                <a href="../../编程题与分析题/26.判断两个对象相等.html">
+            
+                    
+                    6.26 判断两个对象相等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.27" data-path="../../编程题与分析题/27.实现乱序函数.html">
+            
+                <a href="../../编程题与分析题/27.实现乱序函数.html">
+            
+                    
+                    6.27 实现乱序函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    七、面经系列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../面经系列/0.面试技巧.html">
+            
+                <a href="../../面经系列/0.面试技巧.html">
+            
+                    
+                    7.0 面试技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../面经系列/1.阿里面经.html">
+            
+                <a href="../../面经系列/1.阿里面经.html">
+            
+                    
+                    7.1 阿里面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../面经系列/2.腾讯面经.html">
+            
+                <a href="../../面经系列/2.腾讯面经.html">
+            
+                    
+                    7.2 腾讯面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../面经系列/3.百度面经.html">
+            
+                <a href="../../面经系列/3.百度面经.html">
+            
+                    
+                    7.3 百度面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../面经系列/4.头条面经.html">
+            
+                <a href="../../面经系列/4.头条面经.html">
+            
+                    
+                    7.4 头条面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../面经系列/5.美团面经.html">
+            
+                <a href="../../面经系列/5.美团面经.html">
+            
+                    
+                    7.5 美团面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    八、结束
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../总结/1.前端总结.html">
+            
+                <a href="../../总结/1.前端总结.html">
+            
+                    
+                    8.1 前端总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../总结/2.参考资料.html">
+            
+                <a href="../../总结/2.参考资料.html">
+            
+                    
+                    8.2 参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<!-- Content nav -->
+	<div class="book-anchor">
+		<div class="book-anchor-title">在这篇文章中:</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >1.8.2 异常捕获问题</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<html><head></head><body><h1 id="&#x5F02;&#x5E38;&#x6355;&#x83B7;&#x95EE;&#x9898;">&#x5F02;&#x5E38;&#x6355;&#x83B7;&#x95EE;&#x9898;</h1>
+<h2 id="1-&#x5F02;&#x5E38;&#x6355;&#x83B7;&#x6269;&#x5C55;&#x5230;&#x6D41;&#x884C;&#x6846;&#x67B6;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF1F;">1. &#x5F02;&#x5E38;&#x6355;&#x83B7;&#x6269;&#x5C55;&#x5230;&#x6D41;&#x884C;&#x6846;&#x67B6;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF1F;</h2>
+<h3 id="11-script-error">1.1 Script error</h3>
+<p>&#x6211;&#x4EEC;&#x5408;&#x4E4E;&#x60C5;&#x7406;&#x5730;&#x5728;&#x672C;&#x5730;&#x9875;&#x9762;&#x8FDB;&#x884C;&#x5C1D;&#x8BD5;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js">&lt;!-- http:<span class="hljs-comment">//localhost:3031/ --&gt;</span>
+&lt;script&gt;
+<span class="hljs-built_in">window</span>.onerror = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">arguments</span>);
+};
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+&lt;script src=<span class="hljs-string">&quot;http://cdn.xxx.com/index.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x628A;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x653E;&#x5230;&#x5F02;&#x57DF;&#x4E0A;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x52A0;&#x8F7D;&#xFF0C;&#x7ECF;&#x8FC7;&#x5206;&#x6790;&#x53D1;&#x73B0;&#xFF0C;&#x8DE8;&#x57DF;&#x4E4B;&#x540E;window.onerror&#x662F;&#x65E0;&#x6CD5;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x7EDF;&#x4E00;&#x8FD4;&#x56DE;<code>Script error.</code>&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4FBF;&#x662F;script&#x5C5E;&#x6027;&#x914D;&#x7F6E;<code>crossorigin=&#x201D;anonymous&#x201D;</code>&#x5E76;&#x4E14;&#x670D;&#x52A1;&#x5668;&#x6DFB;&#x52A0;<strong>Access-Control-Allow-Origin</strong>&#x3002;</p>
+<pre><code class="lang-js">&lt;script src=<span class="hljs-string">&quot;http://cdn.xxx.com/index.js&quot;</span> crossorigin=<span class="hljs-string">&quot;anonymous&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+<blockquote>
+<p>[!NOTE]
+&#x4E00;&#x822C;&#x7684;CDN&#x7F51;&#x7AD9;&#x90FD;&#x4F1A;&#x5C06;Access-Control-Allow-Origin&#x914D;&#x7F6E;&#x4E3A;*&#xFF0C;&#x610F;&#x601D;&#x662F;&#x6240;&#x6709;&#x57DF;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x3002;</p>
+</blockquote>
+<h3 id="12-sourcemap">1.2 sourceMap</h3>
+<blockquote>
+<p>[!NOTE]
+&#x89E3;&#x51B3;&#x8DE8;&#x57DF;&#x6216;&#x8005;&#x5C06;&#x811A;&#x672C;&#x5B58;&#x653E;&#x5728;&#x540C;&#x57DF;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x5C06;&#x4EE3;&#x7801;&#x538B;&#x7F29;&#x4E00;&#x4E0B;&#x518D;&#x53D1;&#x5E03;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x4FBF;&#x51FA;&#x73B0;&#x4E86;&#x538B;&#x7F29;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x65E0;&#x6CD5;&#x627E;&#x5230;&#x539F;&#x59CB;&#x62A5;&#x9519;&#x4F4D;&#x7F6E;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+</blockquote>
+<p>&#x6211;&#x4EEC;&#x7528;webpack&#x5C06;&#x4EE3;&#x7801;&#x6253;&#x5305;&#x538B;&#x7F29;&#x6210;bundle.js&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// webpack.config.js</span>
+<span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+
+<span class="hljs-comment">// webpack 4.1.1</span>
+<span class="hljs-built_in">module</span>.exports = {
+    mode: <span class="hljs-string">&apos;development&apos;</span>,
+    entry: <span class="hljs-string">&apos;./client/index.js&apos;</span>,
+    output: {
+        filename: <span class="hljs-string">&apos;bundle.js&apos;</span>,
+        path: path.resolve(__dirname, <span class="hljs-string">&apos;client&apos;</span>)
+    }
+}
+</code></pre>
+<p>&#x6700;&#x540E;&#x6211;&#x4EEC;&#x9875;&#x9762;&#x5F15;&#x5165;&#x7684;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-js">!<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{<span class="hljs-keyword">var</span> o={};<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">n</span>(<span class="hljs-params">r</span>)</span>{<span class="hljs-keyword">if</span>(o[r])<span class="hljs-keyword">return</span> o[r].exports;<span class="hljs-keyword">var</span> t=o[r]={i:r,l:!<span class="hljs-number">1</span>,exports:{}}...;
+</code></pre>
+<p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<blockquote>
+<p>lineNo&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5C0F;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x4E00;&#x822C;&#x662F;1&#xFF0C;&#x800C;columnNo&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;730&#xFF0C;&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x90FD;&#x538B;&#x7F29;&#x5230;&#x4E86;&#x4E00;&#x884C;&#x3002;</p>
+</blockquote>
+<p>&#x90A3;&#x4E48;&#x8BE5;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x5462;&#xFF1F;&#x806A;&#x660E;&#x7684;&#x7AE5;&#x978B;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x731C;&#x5230;&#x542F;&#x7528;<strong>source-map</strong>&#x4E86;&#xFF0C;&#x6CA1;&#x9519;&#xFF0C;&#x6211;&#x4EEC;&#x5229;&#x7528;webpack&#x6253;&#x5305;&#x538B;&#x7F29;&#x540E;&#x751F;&#x6210;&#x4E00;&#x4EFD;&#x5BF9;&#x5E94;&#x811A;&#x672C;&#x7684;map&#x6587;&#x4EF6;&#x5C31;&#x80FD;&#x8FDB;&#x884C;&#x8FFD;&#x8E2A;&#x4E86;&#xFF0C;&#x5728;webpack&#x4E2D;&#x5F00;&#x542F;<strong>source-map</strong>&#x529F;&#x80FD;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    ...
+    devtool: <span class="hljs-string">&apos;#source-map&apos;</span>,
+    ...
+}
+</code></pre>
+<p>&#x6253;&#x5305;&#x538B;&#x7F29;&#x7684;&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#x4F1A;&#x5E26;&#x4E0A;&#x8FD9;&#x6837;&#x7684;&#x6CE8;&#x91CA;&#xFF1A;</p>
+<pre><code class="lang-js">!<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{<span class="hljs-keyword">var</span> o={};<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">n</span>(<span class="hljs-params">r</span>)</span>{<span class="hljs-keyword">if</span>(o[r])<span class="hljs-keyword">return</span> o[r].exports;<span class="hljs-keyword">var</span> t=o[r]={i:r,l:!<span class="hljs-number">1</span>,exports:{}}...;
+<span class="hljs-comment">//# sourceMappingURL=bundle.js.map</span>
+</code></pre>
+<p>&#x610F;&#x601D;&#x662F;&#x8BE5;&#x6587;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;map&#x6587;&#x4EF6;&#x4E3A;bundle.js.map&#x3002;&#x4E0B;&#x9762;&#x4FBF;&#x662F;&#x4E00;&#x4E2A;source-map&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;JSON&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code class="lang-js">version: <span class="hljs-number">3</span>, <span class="hljs-comment">// Source map&#x7684;&#x7248;&#x672C;</span>
+sources: [<span class="hljs-string">&quot;webpack:///webpack/bootstrap&quot;</span>, ...], <span class="hljs-comment">// &#x8F6C;&#x6362;&#x524D;&#x7684;&#x6587;&#x4EF6;</span>
+names: [<span class="hljs-string">&quot;installedModules&quot;</span>, <span class="hljs-string">&quot;__webpack_require__&quot;</span>, ...], <span class="hljs-comment">// &#x8F6C;&#x6362;&#x524D;&#x7684;&#x6240;&#x6709;&#x53D8;&#x91CF;&#x540D;&#x548C;&#x5C5E;&#x6027;&#x540D;</span>
+mappings: <span class="hljs-string">&quot;aACA,IAAAA,KAGA,SAAAC...&quot;</span>, <span class="hljs-comment">// &#x8BB0;&#x5F55;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+file: <span class="hljs-string">&quot;bundle.js&quot;</span>, <span class="hljs-comment">// &#x8F6C;&#x6362;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x540D;</span>
+sourcesContent: [<span class="hljs-string">&quot;// The module cache var installedModules = {};...&quot;</span>], <span class="hljs-comment">// &#x6E90;&#x4EE3;&#x7801;</span>
+sourceRoot: <span class="hljs-string">&quot;&quot;</span> <span class="hljs-comment">// &#x8F6C;&#x6362;&#x524D;&#x7684;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;</span>
+</code></pre>
+<h3 id="13-mvvm&#x6846;&#x67B6;">1.3 MVVM&#x6846;&#x67B6;</h3>
+<blockquote>
+<p>&#x73B0;&#x5728;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x7684;&#x9879;&#x76EE;&#x5F00;&#x59CB;&#x4F7F;&#x7528;&#x524D;&#x7AEF;&#x6846;&#x67B6;&#xFF0C;&#x5728;MVVM&#x6846;&#x67B6;&#x4E2D;&#x5982;&#x679C;&#x4F60;&#x4E00;&#x5982;&#x65E2;&#x5F80;&#x7684;&#x60F3;&#x4F7F;&#x7528;window.onerror&#x6765;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#xFF0C;&#x90A3;&#x4E48;&#x5F88;&#x53EF;&#x80FD;&#x4F1A;&#x7AF9;&#x7BEE;&#x6253;&#x6C34;&#x4E00;&#x573A;&#x7A7A;&#xFF0C;&#x6216;&#x8BB8;&#x6839;&#x672C;&#x6355;&#x83B7;&#x4E0D;&#x5230;&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x7684;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x88AB;&#x6846;&#x67B6;&#x81EA;&#x8EAB;&#x7684;&#x5F02;&#x5E38;&#x673A;&#x5236;&#x6355;&#x83B7;&#x4E86;&#x3002;</p>
+</blockquote>
+<p>&#x6BD4;&#x5982;Vue 2.x&#x4E2D;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x8FD9;&#x6837;&#x6355;&#x83B7;&#x5168;&#x5C40;&#x5F02;&#x5E38;&#xFF1A;</p>
+<pre><code class="lang-js">Vue.config.errorHandler = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, vm, info</span>) </span>{
+    <span class="hljs-keyword">let</span> { 
+        message, <span class="hljs-comment">// &#x5F02;&#x5E38;&#x4FE1;&#x606F;</span>
+        name, <span class="hljs-comment">// &#x5F02;&#x5E38;&#x540D;&#x79F0;</span>
+        script,  <span class="hljs-comment">// &#x5F02;&#x5E38;&#x811A;&#x672C;url</span>
+        line,  <span class="hljs-comment">// &#x5F02;&#x5E38;&#x884C;&#x53F7;</span>
+        column,  <span class="hljs-comment">// &#x5F02;&#x5E38;&#x5217;&#x53F7;</span>
+        stack  <span class="hljs-comment">// &#x5F02;&#x5E38;&#x5806;&#x6808;&#x4FE1;&#x606F;</span>
+    } = err;
+
+    <span class="hljs-comment">// vm&#x4E3A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x7684; Vue &#x5B9E;&#x4F8B;</span>
+    <span class="hljs-comment">// info&#x4E3A; Vue &#x7279;&#x5B9A;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&#x9519;&#x8BEF;&#x6240;&#x5728;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;</span>
+}
+</code></pre>
+<blockquote>
+<p>&#x76EE;&#x524D;script&#x3001;line&#x3001;column&#x8FD9;3&#x4E2A;&#x4FE1;&#x606F;&#x6253;&#x5370;&#x51FA;&#x6765;&#x662F;undefined&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x5728;stack&#x4E2D;&#x90FD;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6B63;&#x5219;&#x5339;&#x914D;&#x53BB;&#x8FDB;&#x884C;&#x83B7;&#x53D6;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x4E0A;&#x62A5;&#x3002;</p>
+<p>&#x540C;&#x6837;&#x7684;&#x5728;react&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5728; React 16.x &#x7248;&#x672C;&#x4E2D;&#x5F15;&#x5165;&#x4E86; Error Boundary&#xFF1A;</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorBoundary</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    <span class="hljs-keyword">constructor</span>(props) {
+        <span class="hljs-keyword">super</span>(props);
+        <span class="hljs-keyword">this</span>.state = { hasError: <span class="hljs-literal">false</span> };
+    }
+
+    componentDidCatch(error, info) {
+        <span class="hljs-keyword">this</span>.setState({ hasError: <span class="hljs-literal">true</span> });
+
+        <span class="hljs-comment">// &#x5C06;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x4E0A;&#x62A5;&#x7ED9;&#x670D;&#x52A1;&#x5668;</span>
+        logErrorToMyService(error, info); 
+    }
+
+    render() {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.state.hasError) {
+            <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#x51FA;&#x9519;&#x4E86;&apos;</span>;
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.props.children;
+    }
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x8BE5;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<p><errorboundary>
+    <mywidget>
+</mywidget></errorboundary>
+&#x8BE6;&#x89C1;&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;Error Handling in React 16</p>
+<h3 id="14-&#x5F02;&#x5E38;&#x4E0A;&#x62A5;">1.4 &#x5F02;&#x5E38;&#x4E0A;&#x62A5;</h3>
+<h4 id="141-sourcemap&#x89E3;&#x6790;">1.4.1 sourceMap&#x89E3;&#x6790;</h4>
+<blockquote>
+<p>[!NOTE]
+&#x5176;&#x5B9E;source-map&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x65E2;&#x7136;&#x662F;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x90A3;&#x4E48;&#x80AF;&#x5B9A;&#x6709;&#x89E3;&#x6790;&#x5B83;&#x7684;&#x529E;&#x6CD5;&#xFF0C;&#x76EE;&#x524D;&#x5E02;&#x9762;&#x4E0A;&#x4E5F;&#x6709;&#x4E13;&#x95E8;&#x89E3;&#x6790;&#x5B83;&#x7684;&#x76F8;&#x5E94;&#x5DE5;&#x5177;&#x5305;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#x6216;&#x8005;node&#x73AF;&#x5883;&#x4E0B;&#x6BD4;&#x8F83;&#x6D41;&#x884C;&#x7684;&#x662F;&#x4E00;&#x6B3E;&#x53EB;&#x505A;&#x2019;source-map&#x2019;&#x7684;&#x63D2;&#x4EF6;&#x3002;</p>
+</blockquote>
+<p>&#x901A;&#x8FC7;require&#x8BE5;&#x63D2;&#x4EF6;&#xFF0C;&#x524D;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x4EE5;&#x5BF9;map&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x4F46;&#x56E0;&#x4E3A;&#x524D;&#x7AEF;&#x89E3;&#x6790;&#x901F;&#x5EA6;&#x8F83;&#x6162;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x4E0D;&#x505A;&#x63A8;&#x8350;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x4F7F;&#x7528;&#x670D;&#x52A1;&#x5668;&#x89E3;&#x6790;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x6709;node&#x4E2D;&#x95F4;&#x5C42;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x5C06;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x63D0;&#x4EA4;&#x5230;&#x4E2D;&#x95F4;&#x5C42;&#xFF0C;&#x7136;&#x540E;&#x89E3;&#x6790;map&#x6587;&#x4EF6;&#x540E;&#x5C06;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;&#x540E;&#x53F0;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E2D;&#x95F4;&#x5C42;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-keyword">const</span> router = express.Router();
+<span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;node-fetch&apos;</span>);
+<span class="hljs-keyword">const</span> sourceMap = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;source-map&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> resolve = file =&gt; path.resolve(__dirname, file);
+
+<span class="hljs-comment">// &#x5B9A;&#x4E49;post&#x63A5;&#x53E3;</span>
+router.post(<span class="hljs-string">&apos;/errorMsg/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    <span class="hljs-keyword">let</span> error = req.body; <span class="hljs-comment">// &#x83B7;&#x53D6;&#x524D;&#x7AEF;&#x4F20;&#x8FC7;&#x6765;&#x7684;&#x62A5;&#x9519;&#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">let</span> url = error.scriptURI; <span class="hljs-comment">// &#x538B;&#x7F29;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
+
+    <span class="hljs-keyword">if</span> (url) {
+        <span class="hljs-keyword">let</span> fileUrl = url.slice(url.indexOf(<span class="hljs-string">&apos;client/&apos;</span>)) + <span class="hljs-string">&apos;.map&apos;</span>; <span class="hljs-comment">// map&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
+
+        <span class="hljs-comment">// &#x89E3;&#x6790;sourceMap</span>
+        <span class="hljs-keyword">let</span> smc = <span class="hljs-keyword">new</span> sourceMap.SourceMapConsumer(fs.readFileSync(resolve(<span class="hljs-string">&apos;../&apos;</span> + fileUrl), <span class="hljs-string">&apos;utf8&apos;</span>)); <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;promise&#x5BF9;&#x8C61;</span>
+
+        smc.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+
+            <span class="hljs-comment">// &#x89E3;&#x6790;&#x539F;&#x59CB;&#x62A5;&#x9519;&#x6570;&#x636E;</span>
+            <span class="hljs-keyword">let</span> ret = result.originalPositionFor({
+                line: error.lineNo, <span class="hljs-comment">// &#x538B;&#x7F29;&#x540E;&#x7684;&#x884C;&#x53F7;</span>
+                column: error.columnNo <span class="hljs-comment">// &#x538B;&#x7F29;&#x540E;&#x7684;&#x5217;&#x53F7;</span>
+            });
+
+            <span class="hljs-keyword">let</span> url = <span class="hljs-string">&apos;&apos;</span>; <span class="hljs-comment">// &#x4E0A;&#x62A5;&#x5730;&#x5740;</span>
+
+            <span class="hljs-comment">// &#x5C06;&#x5F02;&#x5E38;&#x4E0A;&#x62A5;&#x81F3;&#x540E;&#x53F0;</span>
+            fetch(url, {
+                method: <span class="hljs-string">&apos;POST&apos;</span>,
+                headers: {
+                    <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>
+                },
+                body: <span class="hljs-built_in">JSON</span>.stringify({
+                    errorMessage: error.errorMessage, <span class="hljs-comment">// &#x62A5;&#x9519;&#x4FE1;&#x606F;</span>
+                    source: ret.source, <span class="hljs-comment">// &#x62A5;&#x9519;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
+                    line: ret.line, <span class="hljs-comment">// &#x62A5;&#x9519;&#x6587;&#x4EF6;&#x884C;&#x53F7;</span>
+                    column: ret.column, <span class="hljs-comment">// &#x62A5;&#x9519;&#x6587;&#x4EF6;&#x5217;&#x53F7;</span>
+                    stack: error.stack <span class="hljs-comment">// &#x62A5;&#x9519;&#x5806;&#x6808;</span>
+                })
+            }).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+                <span class="hljs-keyword">return</span> response.json();
+            }).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">json</span>) </span>{
+                res.json(json);         
+            });
+        })
+    }
+});
+
+<span class="hljs-built_in">module</span>.exports = router;
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x524D;&#x7AEF;&#x4F20;&#x8FC7;&#x6765;&#x7684;&#x5F02;&#x5E38;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x7AEF;map&#x6587;&#x4EF6;&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x538B;&#x7F29;&#x540E;&#x7684;&#x884C;&#x5217;&#x53F7;&#x4F20;&#x9012;&#x7ED9;sourceMap&#x8FD4;&#x56DE;&#x7684;promise&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x901A;&#x8FC7;originalPositionFor&#x65B9;&#x6CD5;&#x6211;&#x4EEC;&#x80FD;&#x83B7;&#x53D6;&#x5230;&#x539F;&#x59CB;&#x7684;&#x62A5;&#x9519;&#x884C;&#x5217;&#x53F7;&#x548C;&#x6587;&#x4EF6;&#x5730;&#x5740;&#xFF0C;&#x6700;&#x540E;&#x901A;&#x8FC7;ajax&#x5C06;&#x9700;&#x8981;&#x7684;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x7EDF;&#x4E00;&#x4F20;&#x9012;&#x7ED9;&#x540E;&#x53F0;&#x5B58;&#x50A8;&#xFF0C;&#x5B8C;&#x6210;&#x5F02;&#x5E38;&#x4E0A;&#x62A5;&#x3002;</p>
+<p></p><div id="gitalk-container"></div><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script><p></p>
+</body></html>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		<a href="1.错误监控和上报.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 1.8.1 错误监控和上报">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"1.8.2 异常捕获问题","level":"1.2.8.2","depth":3,"next":{"title":"1.9 Web安全","level":"1.2.9","depth":2,"ref":"","articles":[{"title":"1.9.1 XSS攻击","level":"1.2.9.1","depth":3,"path":"前端知识体系/Web安全/1.XSS攻击.md","ref":"前端知识体系/Web安全/1.XSS攻击.md","articles":[]},{"title":"1.9.2 CSRF攻击","level":"1.2.9.2","depth":3,"path":"前端知识体系/Web安全/2.CSRF攻击.md","ref":"前端知识体系/Web安全/2.CSRF攻击.md","articles":[]}]},"previous":{"title":"1.8.1 错误监控和上报","level":"1.2.8.1","depth":3,"path":"前端知识体系/错误监控/1.错误监控和上报.md","ref":"前端知识体系/错误监控/1.错误监控和上报.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-fexa","back-to-top-button","theme-comscore","-page-copyright","github-buttons","-sharing","sharing-plus","splitter","expandable-chapters","lightbox","edit-link","copy-code-button","flexible-alerts","donate","gittalk"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"splitter":{},"search":{},"page-copyright":{"wisdom":"Designer, Frontend Developer & overall web enthusiast","noPowered":true,"copyright":"Copyright &#169; Front End Community","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"Front End Community","baseUri":"https://fecommunity.github.io/","copyrightColor":"#666","description":"modified at"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-fexa":{"search-placeholder":"输入关键字搜索","logo":"https://fecommunity.github.io/front-end-interview/img/logo.png","favicon":"./favicon.ico"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"https://fecommunity.github.io/front-end-interview/img/alipay.png","alipayText":"支付宝捐赠","button":"赏","title":"如果觉得不错，就发个红包请喝个咖啡吧~~~","wechat":"https://fecommunity.github.io/front-end-interview/img/wechat.png","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"theme-comscore":{},"back-to-top-button":{},"github-buttons":{"buttons":[{"user":"fecommunity","repo":"front-end-interview","type":"star","size":"small","count":true}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"copy-code-button":{},"sharing":{"douban":true,"qq":true,"qzone":true,"weibo":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"]},"edit-link":{"label":"编辑此页面","base":"//github.com/fecommunity/front-end-interview/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"gittalk":{"clientID":"f9ee0ea75e03ca50cab9","clientSecret":"387dbdb6125ca9a453e0f75b5dba5ee23401f684","repo":"front-end-interview","owner":"fecommunity","admin":["fecommunity"],"distractionFreeMode":false,"labels":["问题建议"]},"expandable-chapters":{}},"theme":"default","author":"FE Community","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"https://github.com/fecommunity","target":"_blank","name":"前端社区"}]}},"title":"前端工程师面试宝典","gitbook":"*","description":"前端面试宝典，助你收获理想Offer！"},"file":{"path":"前端知识体系/错误监控/2.异常捕获问题.md","mtime":"2019-10-06T11:45:09.010Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-06T12:26:17.608Z"},"basePath":"../..","book":{"language":""}});
+		});
+	</script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-gittalk/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

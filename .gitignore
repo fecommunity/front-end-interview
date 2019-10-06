@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+# book
+_book
+
+# .json
+package.json
+book.json
