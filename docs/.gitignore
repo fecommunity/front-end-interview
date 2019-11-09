@@ -62,3 +62,7 @@ typings/
 
 # book
 _book
+
+# .json
+package.json
+#book.json

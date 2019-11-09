@@ -45,4 +45,4 @@
 </p>
 
 
-推荐使用 https://fecommunity.github.io/front-end-interview/ 在线阅读，在线阅读内容本仓库同步一致。这种方式阅读的优势在于：有侧边栏阅读体验更好，GitHub pages 的访问速度相对来说也比较快。
+推荐使用 https://fecommunity.github.io/front-end-interview/ 在线阅读，在线阅读内容与本仓库同步一致。这种方式阅读的优势在于：有侧边栏阅读体验更好，GitHub pages 的访问速度相对来说也比较快。
