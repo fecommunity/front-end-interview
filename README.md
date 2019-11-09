@@ -1,4 +1,4 @@
-# [前端工程师面试宝典](https://fecommunity.github.io/front-end-interview/)
+# [前端工程师面试宝典](https://fecommunity.github.io/front-end-interview/index.html)
 
 > 前端面试宝典，收集于全网最新、最全面的面试资料，帮助各位求职面试者斩获理想Offer。
 
@@ -32,7 +32,7 @@
 
 
 <p align="center">
-<a href="https://fecommunity.github.io/front-end-interview/" target="_blank">
+<a href="https://fecommunity.github.io/front-end-interview/index.html" target="_blank">
 	<img src="https://fecommunity.github.io/front-end-interview/gitbook/gitbook-plugin-theme-fexa/logo.png" width=""/>
 </a>
 </p>
@@ -45,4 +45,4 @@
 </p>
 
 
-推荐使用 https://fecommunity.github.io/front-end-interview/ 在线阅读，在线阅读内容与本仓库同步一致。这种方式阅读的优势在于：有侧边栏阅读体验更好，GitHub pages 的访问速度相对来说也比较快。
+推荐使用 https://fecommunity.github.io/front-end-interview/index.html 在线阅读，在线阅读内容与本仓库同步一致。这种方式阅读的优势在于：有侧边栏阅读体验更好，GitHub pages 的访问速度相对来说也比较快。
