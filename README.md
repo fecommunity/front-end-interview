@@ -48,4 +48,4 @@
 
 推荐使用 https://fecommunity.github.io/front-end-interview/index.html 在线阅读，在线阅读内容与本仓库同步一致。这种方式阅读的优势在于：有侧边栏阅读体验更好，GitHub pages 的访问速度相对来说也比较快。
 
-### **注：**如遇在线访问当前仓库速度太慢，可尝试访问加速备用链接[点击进入](https://www.52tech.tech/docs/)
+### 注：如遇在线访问当前仓库速度太慢，可尝试访问加速备用链接[点击进入](https://www.52tech.tech/docs/)
